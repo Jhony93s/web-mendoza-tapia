@@ -1,0 +1,1660 @@
+<!doctype html>
+<html lang="es" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mendoza &amp; Tapia | Ingeniería y Supervisión de Obras</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+        /* FIX RESPONSIVE: Evita pantalla blanca a la derecha */
+        /* FIX RESPONSIVE: Evita pantalla blanca a la derecha */
+        html, body {
+            box-sizing: border-box;
+            overflow-x: hidden !important; /* Oculta desborde horizontal */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            
+            /* CORRECCIÓN SCROLL: Esto permite que la barra detecte que bajas */
+            height: auto !important; 
+            overflow-y: auto !important;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@600;700;800&display=swap');
+        
+       
+h1, h2, h3, .btn-primary {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Ajuste de Título Principal RESPONSIVE */
+        #hero-headline {
+            /* Se adapta: chico en celular (1.8rem), grande en PC (3.5rem) */
+            font-size: clamp(1.8rem, 5vw, 3.5rem) !important; 
+            text-transform: none !important;
+            font-weight: 800 !important;
+            line-height: 1.1 !important;
+            width: 100%;
+            word-wrap: break-word;
+        }
+* {
+    font-family: 'Inter', sans-serif;
+}
+        
+        :root {
+            --primary-blue: #004e7c;
+            --accent-yellow: #FECC09;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .project-card img {
+            transition: transform 0.4s ease;
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.08);
+        }
+        
+        .project-card .overlay {
+            transition: background-color 0.3s ease;
+        }
+        
+        .project-card:hover .overlay {
+            background-color: rgba(0, 78, 124, 0.75);
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            
+        }
+        .reveal {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: all 1s ease-out; 
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+        
+        .category-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover:not(.active) {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-card.active {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+        }
+        
+        .category-card.active svg {
+            color: var(--primary-blue);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e5b808;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(254, 204, 9, 0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid var(--accent-yellow);
+            color: var(--accent-yellow);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+        }
+        
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-yellow);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .filter-chip {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .filter-chip:hover {
+            background-color: rgba(254, 204, 9, 0.1);
+        }
+        
+        .filter-chip.active {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @media (max-width: 1024px) {
+            #nosotros .mission-vision-values-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #nosotros .mission-vision-values-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            #carreras .career-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        select option {
+            background-color: #004e7c; 
+            color: white; 
+        }
+       
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0; 
+            transition: opacity 2.5s ease-in-out; 
+            z-index: -2;
+        }
+        .hero-slide.active {
+            opacity: 1; 
+        }
+        
+       
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 78, 124, 0.5);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s ease;
+        }
+        .carousel-btn:hover {
+            background-color: #FECC09;
+            color: #004e7c;
+        }
+        
+        body {
+            background-color: transparent !important; 
+        }
+        #nosotros, #carreras, footer, .service-card {
+            background-color: rgba(0, 78, 124, 0.85) !important; 
+            backdrop-filter: blur(5px); 
+        }
+        #hero-headline, #hero-subheadline {
+            text-shadow: 0 2px 15px rgba(0,0,0,0.9);
+        }
+    </style>
+    
+  <style>
+  /* --- CORRECCIÓN: Tarjetas de Servicios Sólidas --- */
+        .service-card {
+            /* Forzamos el azul sólido sin transparencia */
+            background-color: #004e7c !important; 
+            /* Quitamos el filtro borroso si lo tuviera */
+            backdrop-filter: none !important; 
+            /* Aseguramos que la opacidad sea total */
+            opacity: 1 !important;
+            /* Sombra para que resalten sobre el fondo gris */
+            box-shadow: 0 10px 25px rgba(0, 78, 124, 0.2) !important;
+        }
+  
+  @view-transition { navigation: auto; }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.2); } }
+@keyframes flowDot { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(60px); opacity: 0; } }
+@keyframes flowDotReverse { 0% { transform: translateX(60px); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(0); opacity: 0; } }
+@keyframes waveRipple { 0% { r: 5; opacity: 0.6; } 100% { r: 25; opacity: 0; } }
+@keyframes nodeGlow { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+@keyframes verticalFlow { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(40px); opacity: 0; } }
+@keyframes lineTrace { 0% { stroke-dashoffset: 100; } 100% { stroke-dashoffset: 0; } }
+@keyframes carMove { 0% { transform: translate(0, 0); } 50% { transform: translate(30px, -15px); } 100% { transform: translate(60px, -30px); } }
+@keyframes carMoveReverse { 0% { transform: translate(60px, 30px); } 50% { transform: translate(30px, 15px); } 100% { transform: translate(0, 0); } }
+@keyframes gentlePulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+
+.flow-dot { animation: flowDot 3s ease-in-out infinite; }
+.flow-dot-reverse { animation: flowDotReverse 3s ease-in-out infinite; }
+.pulse-circle { animation: pulse 2s ease-in-out infinite; }
+.wave-ripple { animation: waveRipple 3s ease-out infinite; }
+.node-glow { animation: nodeGlow 1.5s ease-in-out infinite; }
+.vertical-flow { animation: verticalFlow 2.5s ease-in-out infinite; }
+.line-trace { stroke-dasharray: 100; animation: lineTrace 4s linear infinite; }
+.car-move { animation: carMove 4s ease-in-out infinite; }
+.car-move-reverse { animation: carMoveReverse 4s ease-in-out infinite; }
+.gentle-pulse { animation: gentlePulse 2.5s ease-in-out infinite; }
+  </style>
+ </head>
+ <body class="h-full" style="background-color: #ffffff;"><!-- Navigation -->
+ <canvas id="tech-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; background-color: #004e7c;"></canvas>
+    <nav id="main-navbar" style="
+    background-color: transparent; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 100; 
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+ ">
+  <div style="width: 100%; padding: 0 3rem; display: flex; justify-content: space-between; align-items: center;">
+   
+   <div style="display: flex; align-items: center; gap: 0.75rem;">
+    <svg width="40" height="40" viewbox="0 0 40 40" style="color: #FECC09; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"><rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" /> <path d="M10 20 L20 10 L30 20 L20 30 Z" fill="currentColor" /> <circle cx="20" cy="20" r="3" fill="#004e7c" /></svg>
+    <span style="color: white; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Mendoza &amp; Tapia</span>
+   </div>
+
+   <div id="nav-links-container" style="display: flex; gap: 1.5rem; align-items: center; margin-left: 3rem; opacity: 0; transform: translateX(20px); transition: all 0.4s ease; pointer-events: none;">
+    <a href="#inicio" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Inicio</a> 
+    <a href="#nosotros" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Nosotros</a> 
+    <a href="#servicios" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Servicios</a> 
+    <a href="#carreras" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Carreras</a> 
+    <a href="#obras" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Obras</a> 
+    <a href="#certificaciones" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Certificaciones</a> 
+    <a href="#contacto" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Contacto</a>
+   </div>
+  </div>
+ </nav><!-- Hero Section -->
+  <section id="inicio" style="
+    position: relative;
+    padding: 0 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para que la imagen no se salga si hace zoom */
+ ">
+  <div id="hero-carousel">
+      <div class="hero-slide active" style="background-image: url('./Fondo5-web.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('./Fondo12-web.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('./Fondo11-web.jpg');"></div>
+  </div>
+
+
+  <button class="carousel-btn" style="left: 20px;" onclick="prevHeroImage()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="carousel-btn" style="right: 20px;" onclick="nextHeroImage()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center; position: relative; z-index: 10;">
+   <h1 id="hero-headline" style="color: white; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.5px; max-width: 900px; text-transform: uppercase; text-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-left: auto; margin-right: auto;">
+    Supervisión de Proyectos de Infraestructura
+   </h1>
+
+   <p id="hero-subheadline" style="color: rgba(255, 255, 255, 0.95); font-size: 1.125rem; line-height: 1.8; max-width: 700px; font-weight: 500; text-align: center; margin-left: auto; margin-right: auto; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+    Más de 25 años de experiencia en gerencia y supervisión de proyectos de infraestructura hospitalaria, vial y edificaciones para el sector público y privado
+   </p>
+  </div>
+
+ </section><!-- About Section -->
+ <!-- Portfolio Section -->
+  
+ <section style="
+    background-color: #004e7c; 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    /* CUADRÍCULA GRANDE Y ELEGANTE */
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px), 
+        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px);
+    padding: 3rem 2rem;
+ ">
+    <div class="flex flex-col md:flex-row justify-around items-center gap-10 md:gap-8 w-full max-w-[1600px] mx-auto">
+
+      <div style="text-align: center;" class="reveal">
+       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">+25</div>
+       <div class="text-white text-xl font-semibold tracking-wide uppercase">Años de experiencia</div>
+      </div>
+
+      <div style="text-align: center;" class="reveal">
+       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">+150</div>
+       <div class="text-white text-xl font-semibold tracking-wide uppercase">Proyectos ejecutados</div>
+      </div>
+
+      <div style="text-align: center;" class="reveal">
+       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">+50</div>
+       <div class="text-white text-xl font-semibold tracking-wide uppercase">Profesionales</div>
+      </div>
+
+      <div style="text-align: center;" class="reveal">
+       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">100%</div>
+       <div class="text-white text-xl font-semibold tracking-wide uppercase">Compromiso</div>
+      </div>
+
+    </div>
+ </section> 
+ <section id="nosotros" style="
+    padding: 6rem 2rem; 
+    background-color: #004e7c; 
+    /* CUADRÍCULA GRANDE Y ELEGANTE */
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px), 
+        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px);
+ ">
+  <div style="max-width: 1400px; margin: 0 auto;">
+   <div style="text-align: center; margin-bottom: 5rem;">
+    <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.15); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
+     NOSOTROS
+    </div>
+    <h2 class="reveal" style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1.5rem; transition-delay: 0.2s;">Mendoza &amp; Tapia</h2>
+    <p id="company-description" class="reveal" style="color: rgba(255, 255, 255, 0.85); font-size: 1.125rem; line-height: 1.8; max-width: 900px; margin: 0 auto; transition-delay: 0.4s;">Somos una empresa líder en supervisión de obras e infraestructura, especializada en proyectos de alta complejidad para instituciones públicas y empresas privadas. Nuestro equipo de profesionales altamente calificados garantiza el cumplimiento de estándares internacionales de calidad, seguridad y eficiencia en cada proyecto.</p>
+   </div>
+   
+   <div class="mission-vision-values-grid" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+    
+    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+     <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
+      <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z" /> <path d="M2 17l10 5 10-5" /> <path d="M2 12l10 5 10-5" /></svg>
+     </div>
+     <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Misión</h3>
+     <p id="mission-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Brindar servicios de supervisión y gerencia de proyectos de infraestructura con los más altos estándares de calidad.</p>
+    </div>
+
+    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+     <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
+      <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="12" r="10" /> <path d="M12 6v6l4 2" /></svg>
+     </div>
+     <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Visión</h3>
+     <p id="vision-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Ser reconocidos como la empresa líder en supervisión de obras e infraestructura en América Latina.</p>
+    </div>
+
+    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+     <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
+      <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg>
+     </div>
+     <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Valores</h3>
+     <p id="values-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Integridad profesional, transparencia en cada proceso, compromiso con la excelencia y responsabilidad social.</p>
+    </div>
+
+   </div>
+
+ </section>
+ <section id="obras" style="padding: 6rem 2rem; background-color: #ffffff;">
+   <div style="max-width: 1400px; margin: 0 auto;"><!-- Section Header -->
+    <div style="text-align: center; margin-bottom: 3rem;">
+     <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.1); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;">
+      PORTAFOLIO
+     </div>
+     <h2 class="reveal" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Proyectos Supervisados</h2>
+     <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 900px; margin: 0 auto; transition-delay: 0.4s;">Una selección completa de proyectos en supervisión de obras e infraestructura</p>
+    </div><!-- Category Cards -->
+    <div id="category-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;"><!-- Category cards will be rendered here -->
+    </div><!-- Projects Content -->
+    <div id="portfolio-content" style="display: none;"><!-- Back button --> <button onclick="backToCategories()" style="display: flex; align-items: center; gap: 0.75rem; background-color: #004e7c; color: white; padding: 0.875rem 1.75rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 2.5rem; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#054a73'" onmouseout="this.style.backgroundColor='#004e7c'">
+      <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg> Volver a Categorías </button> <!-- Category Title -->
+     <div id="category-header" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 3px solid #FECC09;">
+      <div id="category-icon" style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+      </div>
+      <h3 id="category-title" style="color: #004e7c; font-size: 2rem; font-weight: 700; margin: 0;"></h3>
+     </div><!-- Projects Grid -->
+     <div id="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;"><!-- Projects will be rendered here -->
+     </div>
+    </div>
+   </div>    
+ <!-- Services Section -->
+  <section id="servicios" style="padding: 6rem 2rem; background-color: #f8f9fa;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+   <div style="text-align: center; margin-bottom: 4rem;">
+    <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.1); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;">
+     SERVICIOS
+    </div>
+    <h2 class="reveal" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Soluciones Integrales en Ingeniería</h2>
+    <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto; transition-delay: 0.4s;">Ofrecemos servicios especializados para garantizar el éxito de sus proyectos de infraestructura</p>
+   </div>
+   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem;">
+    
+    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+     <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M9 11l3 3L22 4" /> <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+     </div>
+     <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Supervisión de Obras</h3>
+     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Control técnico, administrativo y financiero durante todas las etapas de ejecución de proyectos de infraestructura.</p>
+    </div>
+
+    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+     <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /> <path d="M9 21V9" /></svg>
+     </div>
+     <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Gerencia de Proyectos</h3>
+     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Dirección integral de proyectos desde la planificación hasta la entrega final, asegurando plazos y presupuestos.</p>
+    </div>
+
+    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+     <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /> <polyline points="9 22 9 12 15 12 15 22" /></svg>
+     </div>
+     <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Edificaciones</h3>
+     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Supervisión especializada en proyectos de edificaciones comerciales, institucionales y residenciales de gran escala.</p>
+    </div>
+
+    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+     <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+     </div>
+     <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Hospitales</h3>
+     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Gestión y supervisión de infraestructura hospitalaria con estándares internacionales de salud y seguridad.</p>
+    </div>
+
+    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+     <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /> <polyline points="7.5 4.21 12 6.81 16.5 4.21" /> <polyline points="7.5 19.79 7.5 14.6 3 12" /> <polyline points="21 12 16.5 14.6 16.5 19.79" /> <polyline points="3.27 6.96 12 12.01 20.73 6.96" /> <line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+     </div>
+     <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Intercambios Viales</h3>
+     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Supervisión de infraestructura vial compleja, puentes, túneles y sistemas de transporte urbano.</p>
+    </div>
+
+    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+     <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8" /> <line x1="16" y1="13" x2="8" y2="13" /> <line x1="16" y1="17" x2="8" y2="17" /> <polyline points="10 9 9 9 8 9" /></svg>
+     </div>
+     <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">Estudio de Proyectos</h3>
+     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Análisis técnico, viabilidad económica y estudios de impacto para proyectos de infraestructura a gran escala.</p>
+    </div>
+
+   </div>
+  </div>
+ </section>
+ 
+ 
+ 
+  </section><!-- Project Detail Modal -->
+  <div id="project-modal" class="modal">
+   <div style="background-color: white; max-width: 1200px; width: 90%; margin: 2rem; border-radius: 12px; overflow: hidden; position: relative;"><button id="close-modal" style="position: absolute; top: 1.5rem; right: 1.5rem; background-color: rgba(0,0,0,0.7); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">×</button>
+    <div id="modal-content"><!-- Content will be injected here -->
+    </div>
+   </div>
+  </div><!-- Certifications Section -->
+  <section id="certificaciones" style="padding: 4rem 2rem; background-color: #ffffff;">
+   <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+     <h2 style="color: #004e7c; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem;">Certificaciones y Reconocimientos</h2>
+     <p style="color: #4a5568; font-size: 0.9375rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">Nuestras certificaciones internacionales respaldan nuestro compromiso con la calidad, cumplimiento normativo y estándares globales en cada proyecto</p>
+    </div>
+    <div style="position: relative; max-width: 1100px; margin: 0 auto;"><!-- Navigation Arrows --> <button id="cert-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: #004e7c; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease; opacity: 0.7;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='#054a73'" onmouseout="this.style.opacity='0.7'; this.style.backgroundColor='#004e7c'">
+      <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2.5"><path d="M15 18l-6-6 6-6" />
+      </svg></button> <button id="cert-next" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: #004e7c; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease; opacity: 0.7;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='#054a73'" onmouseout="this.style.opacity='0.7'; this.style.backgroundColor='#004e7c'">
+      <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2.5"><path d="M9 18l6-6-6-6" />
+      </svg></button> <!-- Carousel Container -->
+     <div id="cert-carousel-container" style="overflow: hidden; position: relative;">
+      <div id="cert-carousel" style="display: flex; gap: 1.5rem; transition: transform 0.4s ease; touch-action: pan-y;"><!-- ISO 9001 -->
+       <div onclick="openCertModal('iso9001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+        <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M9 11l3 3L22 4" /> <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+         </svg>
+        </div>
+        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 9001</h3>
+        <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2015</p>
+       </div><!-- ISO 14001 -->
+       <div onclick="openCertModal('iso14001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+        <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M3 3h18v18H3z" /> <path d="M12 8v8m-4-4h8" />
+         </svg>
+        </div>
+        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 14001</h3>
+        <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2015</p>
+       </div><!-- ISO 45001 -->
+       <div onclick="openCertModal('iso45001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+        <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M20 7h-9M14 17H5M6 12l-2 2 2 2M18 12l2 2-2 2" /> <circle cx="12" cy="12" r="3" />
+         </svg>
+        </div>
+        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 45001</h3>
+        <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2018</p>
+       </div><!-- ISO 37001 -->
+       <div onclick="openCertModal('iso37001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+        <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+         </svg>
+        </div>
+        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 37001</h3>
+        <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2016</p>
+       </div><!-- Award 1 -->
+       <div onclick="openCertModal('award1')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+        <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="8" r="7" /> <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+         </svg>
+        </div>
+        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Premio Nacional</h3>
+        <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">Excelencia</p>
+       </div><!-- Award 2 -->
+       <div onclick="openCertModal('award2')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
+        <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+         </svg>
+        </div>
+        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Socio Estratégico</h3>
+        <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">Sector Público</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Certification Modal -->
+  <div id="cert-modal" class="modal">
+   <div style="background-color: white; max-width: 600px; width: 90%; margin: 2rem; border-radius: 8px; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3);"><button onclick="closeCertModal()" style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(0,0,0,0.1); color: #004e7c; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 300; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.2)'" onmouseout="this.style.backgroundColor='rgba(0,0,0,0.1)'">×</button>
+    <div id="cert-modal-content" style="padding: 2.5rem;"><!-- Content will be injected here -->
+    </div>
+   </div>
+  </div><!-- News Section -->
+  <section id="noticias" style="padding: 6rem 2rem; background-color: #f3f4f6;">
+  <div style="max-width: 1400px; margin: 0 auto;">
+   
+   <div style="text-align: center; margin-bottom: 4rem;">
+    <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.05); color: #004e7c; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
+     NOTICIAS
+    </div>
+    <h2 class="reveal" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Actualizaciones Corporativas</h2>
+    <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto; transition-delay: 0.4s;">Las últimas novedades sobre nuestros proyectos y logros institucionales</p>
+   </div>
+   
+   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+    
+    <div class="reveal" style="background-color: #004e7c; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+     <div style="height: 200px; background: linear-gradient(135deg, #054a73 0%, #021c30 100%); display: flex; align-items: center; justify-content: center;">
+      <svg width="64" height="64" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /> <path d="M9 21V9" /></svg>
+     </div>
+     <div style="padding: 2rem;">
+      <div style="color: #FECC09; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem;">ENE 2024</div>
+      <h3 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.4;">Adjudicación de Supervisión del Nuevo Hospital Regional</h3>
+      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify;">Mendoza &amp; Tapia ha sido seleccionada para supervisar la construcción del Hospital Regional del Norte, proyecto de $120M con 400 camas y tecnología de última generación.</p>
+     </div>
+    </div>
+
+    <div class="reveal" style="background-color: #004e7c; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition-delay: 0.2s;">
+     <div style="height: 200px; background: linear-gradient(135deg, #054a73 0%, #021c30 100%); display: flex; align-items: center; justify-content: center;">
+      <svg width="64" height="64" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="8" r="7" /> <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></svg>
+     </div>
+     <div style="padding: 2rem;">
+      <div style="color: #FECC09; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem;">DIC 2023</div>
+      <h3 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.4;">Certificación ISO 45001:2018 en Seguridad Ocupacional</h3>
+      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify;">Alcanzamos la certificación internacional en gestión de seguridad y salud ocupacional, reforzando nuestro compromiso con el bienestar del personal en obra.</p>
+     </div>
+    </div>
+
+    <div class="reveal" style="background-color: #004e7c; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition-delay: 0.4s;">
+     <div style="height: 200px; background: linear-gradient(135deg, #054a73 0%, #021c30 100%); display: flex; align-items: center; justify-content: center;">
+      <svg width="64" height="64" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+     </div>
+     <div style="padding: 2rem;">
+      <div style="color: #FECC09; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem;">NOV 2023</div>
+      <h3 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.4;">Culminación Exitosa del Intercambio Vial Metropolitano</h3>
+      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify;">Finalizamos con éxito la supervisión del intercambio vial más complejo de la región, mejorando la movilidad de 500,000 ciudadanos diariamente.</p>
+     </div>
+    </div>
+
+   </div>
+  </div>
+ </section><!-- Contact Section -->
+  <section id="contacto" style="
+    padding: 6rem 2rem; 
+    /* Aquí ponemos la imagen con una capa azul semitransparente encima para que se vea elegante */
+    background-image: linear-gradient(rgba(0, 78, 124, 0.85), rgba(0, 78, 124, 0.75)), url('./Fondo4-web.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax: la imagen se queda quieta al bajar */
+ ">
+   <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="text-align: center; margin-bottom: 4rem;">
+     <div style="display: inline-block; background-color: rgba(254, 204, 9, 0.2); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem; border: 1px solid #FECC09;">
+      CONTACTO
+     </div>
+     <h2 style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem;">Póngase en contacto con nosotros</h2>
+     <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.125rem; max-width: 700px; margin: 0 auto;">Estamos listos para asesorarlo en la supervisión y gerencia de su próxima obra</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+     
+     <div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+      <form action="https://formspree.io/f/xlgbkyjq" method="POST">
+        <div style="margin-bottom: 1.5rem;">
+            <label for="name" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Nombre Completo *</label> 
+            <input type="text" name="nombre" id="name" required style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label for="email" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Email Corporativo *</label> 
+            <input type="email" name="email" id="email" required style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label for="phone" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Teléfono *</label> 
+            <input type="tel" name="telefono" id="phone" required style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label for="company" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Empresa / Institución</label> 
+            <input type="text" name="empresa" id="company" style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label for="message" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Mensaje *</label> 
+            <textarea name="mensaje" id="message" required rows="4" style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; background-color: #FECC09; color: #004e7c;"> Enviar Mensaje </button>
+      </form>
+      <div id="form-message" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
+     </div>
+
+     <div>
+      <div style="background-color: rgba(0, 78, 124, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 12px; margin-bottom: 2rem;">
+       <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">Información de Contacto</h3>
+       
+       <div style="margin-bottom: 2rem;">
+        <div style="display: flex; align-items: start; gap: 1rem;">
+         <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3" /></svg>
+         </div>
+         <div>
+          <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Oficina Principal</h4>
+          <p id="office-address" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Av. Empresarial 2450, Edificio Corporativo Torre A, Piso 12, San Isidro, Lima, Perú</p>
+         </div>
+        </div>
+       </div>
+
+       <div style="margin-bottom: 2rem;">
+        <div style="display: flex; align-items: start; gap: 1rem;">
+         <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+         </div>
+         <div>
+          <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Teléfono</h4>
+          <p id="company-phone" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">+51 1 652-8800<br>+51 987 654 321</p>
+         </div>
+        </div>
+       </div>
+
+       <div>
+        <div style="display: flex; align-items: start; gap: 1rem;">
+         <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6" /></svg>
+         </div>
+         <div>
+          <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Email</h4>
+          <p id="company-email" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">contacto@mendozatapia.com<br>proyectos@mendozatapia.com</p>
+         </div>
+        </div>
+       </div>
+
+      </div>
+      <div style="background-color: #FECC09; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+       <p style="color: #004e7c; font-weight: 600; font-size: 1rem; line-height: 1.6;">Horario de Atención<br><span style="font-weight: 700; font-size: 1.125rem;">Lunes a Viernes: 8:00 - 18:00</span></p>
+      </div>
+     </div>
+    </div>
+   </div>
+ </section><!-- Careers Section -->
+  <section id="carreras" style="padding: 6rem 2rem; background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px);">
+   
+    <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 4rem;">
+     <div style="display: inline-block; background-color: rgba(254, 204, 9, 0.15); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;">
+      CARRERAS
+     </div>
+     <h2 style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem;">Únete a Nuestro Equipo</h2>
+     <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.125rem; max-width: 800px; margin: 0 auto; line-height: 1.7;">Buscamos profesionales comprometidos con la excelencia, la innovación y el desarrollo de proyectos de alto impacto.</p>
+    </div>
+    <div class="career-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;"><!-- Application Form -->
+     <div style="background-color: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(254, 204, 9, 0.2);">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+       <div style="width: 50px; height: 50px; background-color: #FECC09; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8" /> <line x1="16" y1="13" x2="8" y2="13" /> <line x1="16" y1="17" x2="8" y2="17" /> <polyline points="10 9 9 9 8 9" />
+        </svg>
+       </div>
+       <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin: 0;">Formulario de Postulación</h3>
+      </div>
+      <form id="career-form" action="https://formspree.io/f/xlgbkyjq" method="POST" enctype="multipart/form-data">
+       
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-name" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Nombre Completo *</label> 
+        <input type="text" id="career-name" name="nombre_postulante" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;">
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-email" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Email *</label> 
+        <input type="email" id="career-email" name="email_postulante" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;">
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-phone" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Teléfono *</label> 
+        <input type="tel" id="career-phone" name="telefono_postulante" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;">
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-area" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Área de Interés *</label> 
+        <select id="career-area" name="area_interes" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;"> 
+            <option value="">Seleccionar área</option> 
+            <option value="ingenieria">Ingeniería</option> 
+            <option value="supervision">Supervisión</option> 
+            <option value="administracion">Administración</option> 
+            <option value="seguridad">Seguridad</option> 
+            <option value="otros">Otros</option> 
+        </select>
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-experience" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Nivel de Experiencia *</label> 
+        <select id="career-experience" name="experiencia" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;"> 
+            <option value="">Seleccionar nivel</option> 
+            <option value="junior">Junior (0-2 años)</option> 
+            <option value="semi-senior">Semi-Senior (3-5 años)</option> 
+            <option value="senior">Senior (6-10 años)</option> 
+            <option value="experto">Experto (10+ años)</option> 
+        </select>
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-availability" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Disponibilidad *</label> 
+        <select id="career-availability" name="disponibilidad" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;"> 
+            <option value="">Seleccionar disponibilidad</option> 
+            <option value="inmediata">Inmediata</option> 
+            <option value="15-dias">15 días</option> 
+            <option value="30-dias">30 días</option> 
+            <option value="negociable">Negociable</option> 
+        </select>
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-cv" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Adjuntar CV (PDF, DOC, DOCX) *</label> 
+        <input type="file" id="career-cv" name="archivo_cv" accept=".pdf,.doc,.docx" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;">
+       </div>
+
+       <div style="margin-bottom: 1.5rem;">
+        <label for="career-message" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Mensaje (Opcional)</label> 
+        <textarea id="career-message" name="mensaje" rows="3" style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; resize: vertical; background-color: rgba(255, 255, 255, 0.05); color: white;"></textarea>
+       </div>
+
+       <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; background-color: #FECC09; color: #004e7c;"> Postular Ahora </button>
+      </form>
+      <div id="career-form-message" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
+     </div><!-- Why Work With Us -->
+     <div style="background-color: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(254, 204, 9, 0.2);">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+       <div style="width: 50px; height: 50px; background-color: #FECC09; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M23 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+       </div>
+       <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin: 0;">¿Por qué trabajar con nosotros?</h3>
+      </div>
+      <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-size: 1rem; margin-bottom: 1.25rem;">En Mendoza &amp; Tapia ofrecemos un entorno de <strong style="color: white;">desarrollo profesional continuo</strong> donde participarás en proyectos de infraestructura hospitalaria, vial y edificaciones de gran escala e impacto social.</p>
+      <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-size: 1rem; margin-bottom: 2rem;">Trabajamos con <strong style="color: white;">estándares técnicos internacionales</strong>, fomentando la excelencia, el trabajo en equipo y la innovación en cada etapa de nuestros proyectos.</p>
+      <div style="border-top: 1px solid rgba(254, 204, 9, 0.2); padding-top: 2rem; margin-top: 2rem;">
+       <h4 style="color: #FECC09; font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem;">Requisitos generales</h4>
+       <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-size: 0.9375rem; margin-bottom: 0.75rem; padding-left: 2rem; position: relative;">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2" style="position: absolute; left: 0; top: 0.25rem;"><polyline points="20 6 9 17 4 12" />
+         </svg> Formación profesional en ingeniería o carreras afines</li>
+        <li style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-size: 0.9375rem; margin-bottom: 0.75rem; padding-left: 2rem; position: relative;">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2" style="position: absolute; left: 0; top: 0.25rem;"><polyline points="20 6 9 17 4 12" />
+         </svg> Experiencia en proyectos de infraestructura (según rol)</li>
+        <li style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-size: 0.9375rem; margin-bottom: 0.75rem; padding-left: 2rem; position: relative;">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2" style="position: absolute; left: 0; top: 0.25rem;"><polyline points="20 6 9 17 4 12" />
+         </svg> Compromiso con la calidad, seguridad y cumplimiento normativo</li>
+        <li style="color: rgba(255, 255, 255, 0.85); line-height: 1.8; font-size: 0.9375rem; padding-left: 2rem; position: relative;">
+         <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2" style="position: absolute; left: 0; top: 0.25rem;"><polyline points="20 6 9 17 4 12" />
+         </svg> Capacidad de trabajo en equipo y responsabilidad profesional</li>
+       </ul>
+      </div>
+     </div>
+    </div><!-- Call to Action -->
+    <div style="text-align: center; background-color: rgba(254, 204, 9, 0.1); padding: 3rem 2rem; border-radius: 12px; border: 2px solid rgba(254, 204, 9, 0.3);">
+     <h3 style="color: white; font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">¿Tienes dudas sobre el proceso de postulación?</h3>
+     <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.0625rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Contáctanos directamente a través de nuestro correo de Recursos Humanos</p>
+     <p style="color: #FECC09; font-size: 1.125rem; font-weight: 600; margin: 0;">📧 cpi.verificaciones@gmail.com</p>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 4rem 2rem 2rem; color: white;">
+   <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;"><!-- Company Info -->
+     <div>
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+       <svg width="36" height="36" viewbox="0 0 40 40" style="color: #FECC09;"><rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" /> <path d="M10 20 L20 10 L30 20 L20 30 Z" fill="currentColor" /> <circle cx="20" cy="20" r="3" fill="#004e7c" />
+       </svg><span style="font-size: 1.25rem; font-weight: 700;">Mendoza &amp; Tapia</span>
+      </div>
+      <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7; margin-bottom: 1.5rem;">Líderes en supervisión de obras e infraestructura con más de 25 años de experiencia en proyectos de alta complejidad.</p>
+     </div><!-- Quick Links -->
+     <div>
+      <h4 style="color: #FECC09; font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;">Enlaces Rápidos</h4>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+       <li style="margin-bottom: 0.75rem;"><a href="#nosotros" class="nav-link" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Nosotros</a></li>
+       <li style="margin-bottom: 0.75rem;"><a href="#servicios" class="nav-link" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Servicios</a></li>
+       <li style="margin-bottom: 0.75rem;"><a href="#obras" class="nav-link" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Obras Ejecutadas</a></li>
+       <li style="margin-bottom: 0.75rem;"><a href="#certificaciones" class="nav-link" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Certificaciones</a></li>
+       <li><a href="#contacto" class="nav-link" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Contacto</a></li>
+      </ul>
+     </div><!-- Services -->
+     <div>
+      <h4 style="color: #FECC09; font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;">Servicios</h4>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+       <li style="margin-bottom: 0.75rem; color: rgba(255, 255, 255, 0.8);">Supervisión de Obras</li>
+       <li style="margin-bottom: 0.75rem; color: rgba(255, 255, 255, 0.8);">Gerencia de Proyectos</li>
+       <li style="margin-bottom: 0.75rem; color: rgba(255, 255, 255, 0.8);">Infraestructura Hospitalaria</li>
+       <li style="margin-bottom: 0.75rem; color: rgba(255, 255, 255, 0.8);">Intercambios Viales</li>
+       <li style="color: rgba(255, 255, 255, 0.8);">Estudio de Proyectos</li>
+      </ul>
+     </div><!-- Contact -->
+     <div>
+      <h4 style="color: #FECC09; font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;">Contacto</h4>
+      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 0.75rem;">Av. Empresarial 2450<br>
+       San Isidro, Lima, Perú</p>
+      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 0.75rem;">Tel: +51 1 652-8800</p>
+      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7;">Email: contacto@mendozatapia.com</p>
+     </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; text-align: center;">
+     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.875rem;">© 2024 Mendoza &amp; Tapia. Todos los derechos reservados. | ISO 9001:2015 | ISO 14001:2015 | ISO 45001:2018 | ISO 37001:2016</p>
+    </div>
+   </div>
+  </footer>
+  <script>
+        const defaultConfig = {
+            hero_headline: "Supervisión de Obras e Infraestructura de Clase Mundial",
+            hero_subheadline: "Más de 25 años de experiencia en gerencia y supervisión de proyectos de infraestructura hospitalaria, vial y edificaciones para el sector público y privado",
+            company_description: "Somos una empresa líder en supervisión de obras e infraestructura, especializada en proyectos de alta complejidad para instituciones públicas y empresas privadas. Nuestro equipo de profesionales altamente calificados garantiza el cumplimiento de estándares internacionales de calidad, seguridad y eficiencia en cada proyecto.",
+            mission_text: "Brindar servicios de supervisión y gerencia de proyectos de infraestructura con los más altos estándares de calidad, seguridad y cumplimiento normativo, contribuyendo al desarrollo sostenible del país.",
+            vision_text: "Ser reconocidos como la empresa líder en supervisión de obras e infraestructura en Am��rica Latina, destacando por nuestra innovación tecnológica, excelencia profesional y compromiso con el desarrollo de proyectos de impacto social.",
+            values_text: "Integridad profesional, transparencia en cada proceso, compromiso con la excelencia, responsabilidad social, innovación constante y trabajo en equipo para garantizar resultados excepcionales.",
+            contact_email: "contacto@mendozatapia.com<br>proyectos@mendozatapia.com",
+            contact_phone: "+51 1 652-8800<br>+51 987 654 321",
+            contact_address: "Av. Empresarial 2450, Edificio Corporativo Torre A, Piso 12, San Isidro, Lima, Perú"
+        };
+
+        // Projects database with real stock photos
+        const allProjects = [
+            {
+                id: 1,
+                name: "Hospital Regional Norte",
+                category: "hospitales",
+                location: "Lima, Perú",
+                status: "ejecucion",
+                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&h=800&fit=crop"
+                ],
+                description: "Supervisión integral de hospital de 400 camas con tecnología de última generación, incluyendo áreas de emergencia, UCI, quirófanos y laboratorios. Proyecto de $120M con certificación LEED.",
+                year: 2024
+            },
+            {
+                id: 2,
+                name: "Intercambio Vial Metropolitano Sur",
+                category: "viales",
+                location: "Arequipa, Perú",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop"
+                ],
+                description: "Gerencia de proyecto de intercambio vial a tres niveles con capacidad para 80,000 vehículos diarios. Incluye puentes peatonales, ciclovías y sistemas de drenaje pluvial avanzados.",
+                year: 2023
+            },
+            {
+                id: 3,
+                name: "Torre Corporativa Central",
+                category: "edificaciones",
+                location: "Santiago, Chile",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Edificio de oficinas clase A+ de 32 pisos con certificación LEED Platinum. Incluye estacionamientos subterráneos, sistemas BMS avanzados y fachada de cristal de alto rendimiento energético.",
+                year: 2023
+            },
+            {
+                id: 4,
+                name: "Centro M��dico Especializado del Pacífico",
+                category: "hospitales",
+                location: "Guayaquil, Ecuador",
+                status: "ejecucion",
+                image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&h=800&fit=crop"
+                ],
+                description: "Clínica de especialidades con 200 camas, equipamiento de imagenología de última generación, helipuerto y área de investigación médica. Inversión de $65M.",
+                year: 2024
+            },
+            {
+                id: 5,
+                name: "Estudio de Viabilidad Túnel Andino",
+                category: "estudios",
+                location: "Cusco, Perú",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=1200&h=800&fit=crop"
+                ],
+                description: "Estudio técnico-económico para túnel vehicular de 8.5km en zona de alta montaña. Incluye análisis geológico, hidrológico, s��smico y estudios de impacto ambiental.",
+                year: 2023
+            },
+            {
+                id: 6,
+                name: "Complejo Residencial Las Américas",
+                category: "edificaciones",
+                location: "Bogotá, Colombia",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop"
+                ],
+                description: "Conjunto residencial de 1,200 departamentos en 5 torres de 28 pisos. Incluye áreas verdes, gimnasio, piscinas, salones comunales y sistemas de seguridad avanzados.",
+                year: 2022
+            },
+            {
+                id: 7,
+                name: "Puente Bicentenario",
+                category: "viales",
+                location: "Quito, Ecuador",
+                status: "ejecucion",
+                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=1200&h=800&fit=crop"
+                ],
+                description: "Puente atirantado de 580m de longitud principal sobre río. Supervisión de diseño sísmico avanzado, 6 carriles vehiculares y 2 ciclovías. Proyecto emblemático de $85M.",
+                year: 2024
+            },
+            {
+                id: 8,
+                name: "Hospital Pediátrico Nacional",
+                category: "hospitales",
+                location: "La Paz, Bolivia",
+                status: "ejecucion",
+                image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200&h=800&fit=crop"
+                ],
+                description: "Hospital especializado en pediatría con 300 camas, 12 quirófanos especializados, UCI pediátrica y neonatal, y centro de investigación en salud infantil.",
+                year: 2024
+            },
+            {
+                id: 9,
+                name: "Centro Comercial Plaza del Sol",
+                category: "edificaciones",
+                location: "Medellín, Colombia",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1555529902-5261145633bf?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=1200&h=800&fit=crop"
+                ],
+                description: "Mall de 150,000m² con 250 locales comerciales, 8 salas de cine, food court, estacionamiento para 3,000 vehículos y sistemas de climatizaci����n inteligente.",
+                year: 2022
+            },
+            {
+                id: 10,
+                name: "Autopista Interoceánica - Tramo 4",
+                category: "viales",
+                location: "Madre de Dios, Perú",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=1200&h=800&fit=crop"
+                ],
+                description: "Supervisión de 145km de carretera asfaltada en zona de selva, incluyendo 18 puentes, túneles, sistemas de drenaje avanzados y señalización completa.",
+                year: 2023
+            },
+            {
+                id: 11,
+                name: "Estudio Maestro Metro Línea 3",
+                category: "estudios",
+                location: "Lima, Perú",
+                status: "ejecucion",
+                image: "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1577495917084-7f5f74766b14?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop"
+                ],
+                description: "Estudio de prefactibilidad y factibilidad para nueva línea de metro de 28km con 22 estaciones. Incluye análisis de demanda, ingeniería conceptual y evaluación económica.",
+                year: 2024
+            },
+            {
+                id: 12,
+                name: "Edificio Institucional Ministerio Público",
+                category: "edificaciones",
+                location: "Lima, Perú",
+                status: "culminada",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            }
+        ];
+
+        // Initialize
+       document.addEventListener('DOMContentLoaded', () => {
+            // 1. Primero cargamos la configuración y textos
+            if (window.elementSdk) {
+                window.elementSdk.init({
+                    defaultConfig,
+                    onConfigChange: async (config) => {
+                        // ... (tu lógica de config existente, no hace falta tocarla si ya funciona)
+                         document.getElementById('hero-headline').textContent = config.hero_headline || defaultConfig.hero_headline;
+                         document.getElementById('hero-subheadline').textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+                         // ... resto de configs ...
+                    },
+                    mapToCapabilities: (config) => ({ recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined }),
+                    mapToEditPanelValues: (config) => new Map([ ["hero_headline", config.hero_headline || defaultConfig.hero_headline] ])
+                });
+            }
+            
+            
+            renderProjects();
+            setupEventListeners();
+            setupNavbarScroll();
+
+            
+            setTimeout(() => {
+            // Configuración del "Ojo" que mira el scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active'); // ¡Aparece!
+                        observer.unobserve(entry.target); // Ya no lo vigiles
+                    }
+                });
+            }, { threshold: 0.1 }); // Se activa al ver el 10% del objeto
+
+            // A. Animar Tarjetas de Servicios, Proyectos y Noticias (Automático)
+            document.querySelectorAll('.service-card, .project-card, .mission-vision-values-grid > div').forEach(el => {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+
+            // B. NUEVO: Detectar cualquier título o texto que tenga la clase "reveal" puesta en el HTML
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+
+        }, 200);
+        });
+
+        function setupNavbarScroll() {
+            const navbar = document.getElementById('main-navbar');
+            const navLinks = document.getElementById('nav-links-container');
+            
+            // Función maestra que decide cómo se ve la barra
+            const updateNavBar = () => {
+                const scrollY = window.pageYOffset;
+                const isHovering = navbar.matches(':hover'); // ¿El mouse está encima?
+                
+                // Si bajamos más de 20px O el mouse está encima...
+                if (scrollY > 20 || isHovering) {
+                    // ACTIVAR BARRA: Fondo azul, botones visibles
+                    navbar.style.backgroundColor = '#004e7c';
+                    navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
+                    
+                    // Mostrar botones suavemente
+                    navLinks.style.opacity = '1';
+                    navLinks.style.transform = 'translateX(0)';
+                    navLinks.style.pointerEvents = 'auto'; // Permitir clicks
+                } else {
+                    // DESACTIVAR BARRA: Transparente, solo logo
+                    navbar.style.backgroundColor = 'transparent';
+                    navbar.style.boxShadow = 'none';
+                    
+                    // Ocultar botones
+                    navLinks.style.opacity = '0';
+                    navLinks.style.transform = 'translateX(20px)';
+                    navLinks.style.pointerEvents = 'none'; // Evitar clicks accidentales
+                }
+            };
+
+            // Escuchamos Scroll y Movimiento de mouse sobre la barra
+            window.addEventListener('scroll', updateNavBar);
+            navbar.addEventListener('mouseenter', updateNavBar);
+            navbar.addEventListener('mouseleave', updateNavBar);
+            
+            // Ejecutar al inicio
+            updateNavBar();
+        }
+
+        function setupEventListeners() {
+            // Modal close
+            document.getElementById('close-modal').addEventListener('click', () => {
+                document.getElementById('project-modal').classList.remove('active');
+            });
+            
+            // ¡AQUÍ BORRAMOS EL BLOQUE DEL CAREER-FORM!
+            // Ya no necesitamos el código JS porque ahora el HTML se encarga de enviar el correo real.
+        }
+
+        const categoryData = {
+    'edificaciones': {
+        name: 'Edificaciones',
+        description: 'Construcción & Estructuras',
+        icon: `<svg viewBox="0 0 400 400" style="width:100%; height:100%;"><defs><linearGradient id="buildingGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/><stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1"/></linearGradient><linearGradient id="buildingGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1"/><stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1"/></linearGradient><linearGradient id="groundGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1"/><stop offset="100%" style="stop-color:#0f2744;stop-opacity:1"/></linearGradient></defs><polygon points="200,320 50,250 200,180 350,250" fill="url(#groundGrad)" opacity="0.5"/><g transform="translate(80, 100)"><polygon points="60,180 60,60 0,90 0,210" fill="#1e40af"/><polygon points="60,180 60,60 120,90 120,210" fill="url(#buildingGrad1)"/><polygon points="60,60 0,90 60,120 120,90" fill="#60a5fa"/><rect x="70" y="100" width="15" height="20" fill="#0f172a" opacity="0.7"/><rect x="95" y="100" width="15" height="20" fill="#0f172a" opacity="0.7"/><rect x="70" y="140" width="15" height="20" fill="#0f172a" opacity="0.7"/><rect x="95" y="140" width="15" height="20" fill="#0f172a" opacity="0.7"/><circle cx="60" cy="60" r="4" fill="#fbbf24" class="node-glow"/><circle cx="120" cy="90" r="3" fill="#fbbf24" class="node-glow" style="animation-delay: 0.5s"/></g><g transform="translate(200, 130)"><polygon points="50,140 50,40 0,60 0,160" fill="#1e40af"/><polygon points="50,140 50,40 100,60 100,160" fill="url(#buildingGrad2)"/><polygon points="50,40 0,60 50,80 100,60" fill="#93c5fd"/><rect x="55" y="75" width="12" height="15" fill="#0f172a" opacity="0.7"/><rect x="75" y="75" width="12" height="15" fill="#0f172a" opacity="0.7"/><rect x="55" y="105" width="12" height="15" fill="#0f172a" opacity="0.7"/><rect x="75" y="105" width="12" height="15" fill="#0f172a" opacity="0.7"/></g><g transform="translate(280, 80)"><line x1="20" y1="200" x2="20" y2="40" stroke="#64748b" stroke-width="4"/><line x1="20" y1="40" x2="80" y2="40" stroke="#64748b" stroke-width="3"/><line x1="20" y1="40" x2="0" y2="60" stroke="#64748b" stroke-width="2"/><line x1="60" y1="40" x2="60" y2="80" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4"/><circle cx="60" cy="80" r="4" fill="#fbbf24" class="vertical-flow"/></g><line x1="140" y1="160" x2="250" y2="170" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/><circle cx="160" cy="162" r="3" fill="#fbbf24" class="flow-dot"/><circle cx="200" cy="165" r="3" fill="#fbbf24" class="flow-dot" style="animation-delay: 1s"/><circle cx="230" cy="168" r="3" fill="#fbbf24" class="flow-dot" style="animation-delay: 2s"/><circle cx="100" cy="250" r="2" fill="#60a5fa" class="gentle-pulse"/><circle cx="300" cy="260" r="2" fill="#60a5fa" class="gentle-pulse" style="animation-delay: 0.7s"/><circle cx="200" cy="290" r="2" fill="#60a5fa" class="gentle-pulse" style="animation-delay: 1.4s"/><circle cx="200" cy="250" r="10" fill="none" stroke="#3b82f6" stroke-width="1" class="wave-ripple" opacity="0.3"/><circle cx="200" cy="250" r="10" fill="none" stroke="#3b82f6" stroke-width="1" class="wave-ripple" style="animation-delay: 1s" opacity="0.3"/></svg>`
+    },
+    'hospitales': {
+        name: 'Hospitales',
+        description: 'Infraestructura Médica',
+        icon: `<svg viewBox="0 0 400 400" style="width:100%; height:100%;"><defs><linearGradient id="hospitalGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1"/><stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1"/></linearGradient><linearGradient id="hospitalGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#93c5fd;stop-opacity:1"/><stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1"/></linearGradient></defs><polygon points="200,330 40,255 200,180 360,255" fill="url(#groundGrad)" opacity="0.5"/><g transform="translate(100, 80)"><polygon points="100,200 100,50 0,100 0,250" fill="#1e40af"/><polygon points="100,200 100,50 200,100 200,250" fill="url(#hospitalGrad1)"/><polygon points="100,50 0,100 100,150 200,100" fill="#93c5fd"/><g transform="translate(115, 100)"><rect x="20" y="10" width="30" height="10" fill="#ffffff"/><rect x="30" y="0" width="10" height="30" fill="#ffffff"/></g><rect x="115" y="150" width="20" height="25" fill="#0f172a" opacity="0.6"/><rect x="145" y="150" width="20" height="25" fill="#0f172a" opacity="0.6"/><rect x="175" y="150" width="20" height="25" fill="#0f172a" opacity="0.6"/><rect x="115" y="190" width="20" height="25" fill="#0f172a" opacity="0.6"/><rect x="145" y="190" width="20" height="25" fill="#0f172a" opacity="0.6"/><rect x="175" y="190" width="20" height="25" fill="#0f172a" opacity="0.6"/><rect x="140" y="220" width="30" height="30" fill="#60a5fa" opacity="0.8"/></g><g transform="translate(50, 180)"><polygon points="50,100 50,30 0,55 0,125" fill="#1e3a5f"/><polygon points="50,100 50,30 100,55 100,125" fill="#2563eb"/><polygon points="50,30 0,55 50,80 100,55" fill="#60a5fa"/></g><g transform="translate(250, 180)"><polygon points="50,100 50,30 0,55 0,125" fill="#1e3a5f"/><polygon points="50,100 50,30 100,55 100,125" fill="#3b82f6"/><polygon points="50,30 0,55 50,80 100,55" fill="#93c5fd"/></g><circle cx="200" cy="130" r="8" fill="none" stroke="#fbbf24" stroke-width="1.5" class="pulse-circle"/><circle cx="200" cy="130" r="15" fill="none" stroke="#fbbf24" stroke-width="1" class="pulse-circle" style="animation-delay: 0.3s" opacity="0.5"/><circle cx="200" cy="130" r="22" fill="none" stroke="#fbbf24" stroke-width="0.5" class="pulse-circle" style="animation-delay: 0.6s" opacity="0.3"/><circle cx="100" cy="230" r="4" fill="#fbbf24" class="node-glow"/><circle cx="300" cy="230" r="4" fill="#fbbf24" class="node-glow" style="animation-delay: 0.5s"/><circle cx="200" cy="280" r="4" fill="#fbbf24" class="node-glow" style="animation-delay: 1s"/><line x1="100" y1="230" x2="200" y2="280" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/><line x1="300" y1="230" x2="200" y2="280" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/><circle cx="130" cy="245" r="2" fill="#fbbf24" class="flow-dot"/><circle cx="270" cy="245" r="2" fill="#fbbf24" class="flow-dot-reverse"/><circle cx="200" cy="310" r="8" fill="none" stroke="#22c55e" stroke-width="1" class="wave-ripple" opacity="0.4"/><circle cx="200" cy="310" r="8" fill="none" stroke="#22c55e" stroke-width="1" class="wave-ripple" style="animation-delay: 1.5s" opacity="0.4"/></svg>`
+    },
+    'viales': {
+        name: 'Intercambios Viales',
+        description: 'Movilidad & Transporte',
+        icon: `<svg viewBox="0 0 400 400" style="width:100%; height:100%;"><defs><linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#374151;stop-opacity:1"/><stop offset="100%" style="stop-color:#1f2937;stop-opacity:1"/></linearGradient><linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/><stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1"/></linearGradient></defs><polygon points="200,350 20,260 200,170 380,260" fill="url(#groundGrad)" opacity="0.4"/><g transform="translate(0, 50)"><polygon points="50,250 150,200 350,200 250,250" fill="url(#roadGrad)"/><line x1="100" y1="235" x2="300" y2="210" stroke="#fbbf24" stroke-width="2" stroke-dasharray="15,10" opacity="0.8"/></g><g transform="translate(80, 100)"><polygon points="120,100 120,60 0,110 0,150" fill="#1e40af"/><polygon points="120,100 120,60 240,110 240,150" fill="url(#bridgeGrad)"/><polygon points="120,60 0,110 120,130 240,110" fill="#60a5fa"/><rect x="40" y="130" width="15" height="80" fill="#1e3a5f"/><rect x="180" y="130" width="15" height="80" fill="#1e3a5f"/></g><g transform="translate(20, 180)"><polygon points="80,80 80,50 0,80 0,110" fill="#2563eb"/><polygon points="80,50 0,80 50,95 80,80" fill="#93c5fd"/></g><g transform="translate(280, 180)"><polygon points="0,80 0,50 100,80 100,110" fill="#3b82f6"/><polygon points="0,50 100,80 50,95 0,80" fill="#60a5fa"/></g><g class="car-move"><polygon points="150,155 160,150 175,150 180,155 180,162 150,162" fill="#fbbf24"/></g><g class="car-move" style="animation-delay: 2s"><polygon points="220,165 230,160 245,160 250,165 250,172 220,172" fill="#60a5fa"/></g><g class="car-move-reverse"><polygon points="180,285 190,280 205,280 210,285 210,292 180,292" fill="#f97316"/></g><circle cx="100" cy="160" r="3" fill="#fbbf24" class="flow-dot"/><circle cx="150" cy="160" r="3" fill="#fbbf24" class="flow-dot" style="animation-delay: 0.5s"/><circle cx="200" cy="160" r="3" fill="#fbbf24" class="flow-dot" style="animation-delay: 1s"/><circle cx="250" cy="160" r="3" fill="#fbbf24" class="flow-dot" style="animation-delay: 1.5s"/><circle cx="300" cy="160" r="3" fill="#fbbf24" class="flow-dot" style="animation-delay: 2s"/><line x1="60" y1="300" x2="340" y2="270" stroke="#3b82f6" stroke-width="1" stroke-dasharray="8,4" opacity="0.3"/><circle cx="100" cy="290" r="5" fill="#fbbf24" class="node-glow"/><circle cx="200" cy="200" r="5" fill="#fbbf24" class="node-glow" style="animation-delay: 0.4s"/><circle cx="300" cy="280" r="5" fill="#fbbf24" class="node-glow" style="animation-delay: 0.8s"/><circle cx="200" cy="300" r="10" fill="none" stroke="#60a5fa" stroke-width="1" class="wave-ripple" opacity="0.3"/></svg>`
+    },
+    'estudios': {
+        name: 'Estudio de Proyectos',
+        description: 'Planificación & Diseño',
+        icon: `<svg viewBox="0 0 400 400" style="width:100%; height:100%;"><defs><linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:1"/><stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1"/></linearGradient><linearGradient id="deskGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1"/><stop offset="100%" style="stop-color:#0f2744;stop-opacity:1"/></linearGradient></defs><g transform="translate(50, 200)"><polygon points="150,0 0,75 150,150 300,75" fill="url(#deskGrad)"/><polygon points="0,75 0,120 150,195 150,150" fill="#0f2744"/><polygon points="300,75 300,120 150,195 150,150" fill="#1e3a5f"/></g><g transform="translate(100, 140)"><polygon points="100,0 0,50 100,100 200,50" fill="url(#paperGrad)"/><line x1="30" y1="45" x2="170" y2="45" stroke="#3b82f6" stroke-width="1" opacity="0.6"/><line x1="40" y1="55" x2="160" y2="55" stroke="#3b82f6" stroke-width="1" opacity="0.6"/><line x1="50" y1="65" x2="150" y2="65" stroke="#3b82f6" stroke-width="1" opacity="0.6"/><rect x="60" y="25" width="30" height="20" fill="none" stroke="#60a5fa" stroke-width="0.5" transform="skewY(-26.57)"/><rect x="100" y="25" width="30" height="20" fill="none" stroke="#60a5fa" stroke-width="0.5" transform="skewY(-26.57)"/></g><g transform="translate(60, 180)"><polygon points="60,0 0,30 60,60 120,30" fill="#dbeafe"/><line x1="20" y1="25" x2="100" y2="25" stroke="#3b82f6" stroke-width="0.5" opacity="0.5"/><line x1="25" y1="35" x2="95" y2="35" stroke="#3b82f6" stroke-width="0.5" opacity="0.5"/><line x1="30" y1="45" x2="90" y2="45" stroke="#3b82f6" stroke-width="0.5" opacity="0.5"/></g><g transform="translate(220, 180)"><polygon points="60,0 0,30 60,60 120,30" fill="#bfdbfe"/><line x1="20" y1="25" x2="100" y2="25" stroke="#1d4ed8" stroke-width="0.5" opacity="0.5"/><line x1="25" y1="35" x2="95" y2="35" stroke="#1d4ed8" stroke-width="0.5" opacity="0.5"/></g><g transform="translate(270, 150)"><polygon points="0,0 60,30 65,25 5,-5" fill="#fbbf24"/><line x1="10" y1="5" x2="55" y2="27" stroke="#b45309" stroke-width="0.5"/></g><g transform="translate(80, 160)"><polygon points="0,20 40,0 45,5 5,25" fill="#64748b"/><polygon points="40,0 45,5 50,2 45,-3" fill="#fbbf24"/></g><g transform="translate(310, 180)"><line x1="0" y1="0" x2="15" y2="40" stroke="#94a3b8" stroke-width="2"/><line x1="0" y1="0" x2="-15" y2="40" stroke="#94a3b8" stroke-width="2"/><circle cx="0" cy="0" r="4" fill="#60a5fa"/></g><line x1="120" y1="210" x2="200" y2="190" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,3" opacity="0.5" class="line-trace"/><line x1="280" y1="210" x2="200" y2="190" stroke="#60a5fa" stroke-width="1" stroke-dasharray="4,3" opacity="0.5" class="line-trace" style="animation-delay: 2s"/><circle cx="200" cy="190" r="6" fill="#fbbf24" class="pulse-circle"/><circle cx="120" cy="210" r="4" fill="#60a5fa" class="node-glow"/><circle cx="280" cy="210" r="4" fill="#60a5fa" class="node-glow" style="animation-delay: 0.5s"/><circle cx="150" cy="200" r="2" fill="#fbbf24" class="flow-dot"/><circle cx="250" cy="200" r="2" fill="#fbbf24" class="flow-dot-reverse"/><g transform="translate(150, 100)"><circle cx="50" cy="30" r="3" fill="#22c55e" class="gentle-pulse"/><circle cx="70" cy="40" r="3" fill="#22c55e" class="gentle-pulse" style="animation-delay: 0.3s"/><circle cx="90" cy="35" r="3" fill="#22c55e" class="gentle-pulse" style="animation-delay: 0.6s"/></g><circle cx="200" cy="190" r="15" fill="none" stroke="#3b82f6" stroke-width="0.5" class="wave-ripple" opacity="0.3"/><circle cx="200" cy="190" r="15" fill="none" stroke="#3b82f6" stroke-width="0.5" class="wave-ripple" style="animation-delay: 1.5s" opacity="0.3"/></svg>`
+    }
+};
+
+        function renderProjects() {
+            renderCategoryCards();
+        }
+
+        function renderCategoryCards() {
+    const container = document.getElementById('category-cards');
+    
+    container.innerHTML = Object.keys(categoryData).map(key => {
+        const category = categoryData[key];
+        const projectCount = allProjects.filter(p => p.category === key).length;
+        
+        return `
+            <div class="service-card" style="background-color: #004e7c; overflow: hidden; padding: 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); cursor: pointer; text-align: center; border: 1px solid rgba(255,255,255,0.1);" onclick="showCategory('${key}')">
+                <div style="width: 100%; aspect-ratio: 1/1; background-color: #0f1d32; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    ${category.icon}
+                </div>
+                <div style="padding: 1.5rem;">
+                    <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">${category.name}</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.5; font-size: 0.9rem; margin-bottom: 1rem; min-height: 40px;">
+                        ${category.description}
+                    </p>
+                    <div style="display: inline-block; background-color: #FECC09; color: #004e7c; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700;">
+                        ${projectCount} ${projectCount === 1 ? 'Proyecto' : 'Proyectos'}
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+        function showCategory(categoryKey) {
+            const category = categoryData[categoryKey];
+            const projects = allProjects.filter(p => p.category === categoryKey);
+            
+            // Hide category cards, show projects content
+            document.getElementById('category-cards').style.display = 'none';
+            document.getElementById('portfolio-content').style.display = 'block';
+            
+            // Update header
+            document.getElementById('category-icon').innerHTML = category.icon.replace('stroke="currentColor"', 'stroke="#FECC09"');
+            document.getElementById('category-title').textContent = category.name;
+            
+            // Render projects
+            const grid = document.getElementById('projects-grid');
+            grid.innerHTML = projects.map(project => `
+                <div class="project-card" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); cursor: pointer;" onclick="openProjectDetail(${project.id})">
+                    <div style="position: relative; height: 240px; overflow: hidden;">
+                        <img src="${project.image}" alt="${project.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+                        <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 78, 124, 0.5); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+                            <h3 style="color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">${project.name}</h3>
+                            <p style="color: rgba(255, 255, 255, 0.9); font-size: 0.875rem; display: flex; align-items: center; gap: 0.375rem;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                ${project.location}
+                            </p>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="display: inline-block; padding: 0.375rem 0.875rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; ${project.status === 'ejecucion' ? 'background-color: rgba(254, 204, 9, 0.15); color: #a87c00;' : 'background-color: rgba(0, 78, 124, 0.1); color: #004e7c;'}">
+                                ${project.status === 'ejecucion' ? 'En Ejecución' : 'Culminada'}
+                            </span>
+                        </div>
+                        <button class="btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.875rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer;">
+                            Ver Detalle
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function backToCategories() {
+            document.getElementById('portfolio-content').style.display = 'none';
+            document.getElementById('category-cards').style.display = 'grid';
+        }
+
+        function getCategoryLabel(category) {
+            const labels = {
+                edificaciones: 'Edificaciones',
+                hospitales: 'Hospitales',
+                viales: 'Intercambios Viales',
+                estudios: 'Estudios'
+            };
+            return labels[category] || category;
+        }
+
+        function openProjectDetail(projectId) {
+            const project = allProjects.find(p => p.id === projectId);
+            if (!project) return;
+
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('modal-content');
+            
+            content.innerHTML = `
+                <div style="position: relative;">
+                    <div style="height: 400px; overflow: hidden; background-color: #004e7c;">
+                        <img src="${project.images[0]}" alt="${project.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+                    </div>
+                    <div style="padding: 3rem;">
+                        <div style="margin-bottom: 2rem;">
+                            <span style="display: inline-block; background-color: #FECC09; color: #004e7c; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">
+                                ${getCategoryLabel(project.category)}
+                            </span>
+                            <h2 style="color: #004e7c; font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">${project.name}</h2>
+                            <p style="color: #4a5568; font-size: 1.125rem; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                ${project.location}
+                            </p>
+                            <span style="display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; ${project.status === 'ejecucion' ? 'background-color: rgba(254, 204, 9, 0.15); color: #a87c00;' : 'background-color: rgba(0, 78, 124, 0.1); color: #004e7c;'}">
+                                ${project.status === 'ejecucion' ? 'En Ejecución' : 'Culminada'}
+                            </span>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Descripción del Proyecto</h3>
+                            <p style="color: #4a5568; line-height: 1.8; font-size: 1.0625rem;">${project.description}</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Galería de Imágenes</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                ${project.images.map(img => `
+                                    <div style="height: 240px; border-radius: 8px; overflow: hidden;">
+                                        <img src="${img}" alt="${project.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <button onclick="closeModal()" class="btn-secondary" style="padding: 1rem 2.5rem; font-size: 1.125rem; font-weight: 600; background: transparent; border-radius: 8px; cursor: pointer;">
+                            Volver al Portafolio
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.remove('active');
+        }
+
+        function openCertModal(certId) {
+            const certData = {
+                'iso9001': {
+                    title: 'ISO 9001:2015',
+                    subtitle: 'Sistemas de Gestión de Calidad',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
+                    description: 'Esta certificación internacional garantiza que Mendoza & Tapia implementa sistemas de gestión de calidad robustos en todos sus procesos. Asegura la mejora continua, la satisfacción del cliente y el cumplimiento de estándares globales en la supervisión y gerencia de proyectos de infraestructura.'
+                },
+                'iso14001': {
+                    title: 'ISO 14001:2015',
+                    subtitle: 'Sistemas de Gestión Ambiental',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M12 8v8m-4-4h8"/></svg>',
+                    description: 'Certifica nuestro compromiso con la protección ambiental y el desarrollo sostenible. Garantizamos que todos nuestros proyectos cumplen con normativas ambientales internacionales, minimizando impactos ecológicos y promoviendo prácticas responsables en la construcción de infraestructura.'
+                },
+                'iso45001': {
+                    title: 'ISO 45001:2018',
+                    subtitle: 'Sistemas de Gestión de Seguridad y Salud Ocupacional',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M20 7h-9M14 17H5M6 12l-2 2 2 2M18 12l2 2-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
+                    description: 'Esta certificación asegura que priorizamos la seguridad y salud de todos los trabajadores en cada proyecto. Implementamos protocolos rigurosos de prevención de riesgos, garantizando ambientes de trabajo seguros y reduciendo accidentes laborales en obras de alta complejidad.'
+                },
+                'iso37001': {
+                    title: 'ISO 37001:2016',
+                    subtitle: 'Sistemas de Gestión Antisoborno',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+                    description: 'Certifica nuestra integridad corporativa y transparencia en todas las operaciones. Garantiza políticas estrictas contra el soborno y la corrupción, asegurando que nuestros procesos son éticos, legales y confiables para instituciones públicas y privadas que trabajan con nosotros.'
+                },
+                'award1': {
+                    title: 'Premio Nacional de Excelencia Empresarial',
+                    subtitle: 'Reconocimiento a la Trayectoria',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>',
+                    description: 'Este reconocimiento oficial destaca nuestra trayectoria de más de 25 años en el sector de supervisión de obras. Valida nuestra excelencia en la gestión de proyectos de infraestructura crítica y nuestro impacto positivo en el desarrollo nacional.'
+                },
+                'award2': {
+                    title: 'Socio Estratégico del Sector Público',
+                    subtitle: 'Alianzas Institucionales',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+                    description: 'Reconocimiento que certifica nuestra colaboración estratégica con ministerios y entidades gubernamentales. Garantiza nuestra capacidad para gestionar proyectos de interés nacional con altos estándares de transparencia, eficiencia y cumplimiento de plazos.'
+                }
+            };
+
+            const cert = certData[certId];
+            if (!cert) return;
+
+            const modal = document.getElementById('cert-modal');
+            const content = document.getElementById('cert-modal-content');
+
+            content.innerHTML = `
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="width: 80px; height: 80px; background-color: #f8f9fa; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        ${cert.icon}
+                    </div>
+                    <h2 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">${cert.title}</h2>
+                    <p style="color: #FECC09; font-size: 1rem; font-weight: 600; margin-bottom: 0;">${cert.subtitle}</p>
+                </div>
+                <div style="border-top: 2px solid #f3f4f6; padding-top: 1.5rem;">
+                    <p style="color: #4a5568; font-size: 0.9375rem; line-height: 1.7; text-align: left;">
+                        ${cert.description}
+                    </p>
+                </div>
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeCertModal() {
+            document.getElementById('cert-modal').classList.remove('active');
+        }
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Certification Carousel - Continuous Loop
+        let certCurrentIndex = 0;
+        let certCardsPerView = 4;
+        let certTotalCards = 6;
+        let certIsTransitioning = false;
+        
+        function updateCertCardsPerView() {
+            const width = window.innerWidth;
+            if (width >= 1024) {
+                certCardsPerView = 4;
+            } else if (width >= 768) {
+                certCardsPerView = 3;
+            } else if (width >= 480) {
+                certCardsPerView = 2;
+            } else {
+                certCardsPerView = 1;
+            }
+        }
+        
+        function cloneCertCards() {
+            const carousel = document.getElementById('cert-carousel');
+            const originalCards = Array.from(carousel.children).slice(0, certTotalCards);
+            
+            // Remove existing clones
+            while (carousel.children.length > certTotalCards) {
+                carousel.removeChild(carousel.lastChild);
+            }
+            
+            // Clone cards at the end for seamless forward loop
+            originalCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+            
+            // Clone cards at the beginning for seamless backward loop
+            for (let i = originalCards.length - 1; i >= 0; i--) {
+                const clone = originalCards[i].cloneNode(true);
+                carousel.insertBefore(clone, carousel.firstChild);
+            }
+            
+            // Start at the actual first card (after prepended clones)
+            certCurrentIndex = certTotalCards;
+            updateCertCarousel(false);
+        }
+        
+        function updateCertCarousel(animate = true) {
+            const carousel = document.getElementById('cert-carousel');
+            const cards = carousel.children;
+            if (cards.length === 0) return;
+            
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 24; // 1.5rem = 24px
+            const offset = -(certCurrentIndex * (cardWidth + gap));
+            
+            if (animate) {
+                carousel.style.transition = 'transform 0.4s ease';
+            } else {
+                carousel.style.transition = 'none';
+            }
+            
+            carousel.style.transform = `translateX(${offset}px)`;
+            
+            // Arrows always visible and enabled for infinite loop
+            document.getElementById('cert-prev').style.opacity = '0.7';
+            document.getElementById('cert-prev').style.cursor = 'pointer';
+            document.getElementById('cert-next').style.opacity = '0.7';
+            document.getElementById('cert-next').style.cursor = 'pointer';
+        }
+        
+        function certNext() {
+            if (certIsTransitioning) return;
+            certIsTransitioning = true;
+            
+            certCurrentIndex++;
+            updateCertCarousel(true);
+            
+            // Check if we're at the cloned section (end)
+            if (certCurrentIndex >= certTotalCards * 2) {
+                setTimeout(() => {
+                    certCurrentIndex = certTotalCards;
+                    updateCertCarousel(false);
+                    certIsTransitioning = false;
+                }, 400);
+            } else {
+                setTimeout(() => {
+                    certIsTransitioning = false;
+                }, 400);
+            }
+        }
+        
+        function certPrev() {
+            if (certIsTransitioning) return;
+            certIsTransitioning = true;
+            
+            certCurrentIndex--;
+            updateCertCarousel(true);
+            
+            // Check if we're at the cloned section (beginning)
+            if (certCurrentIndex < certTotalCards) {
+                setTimeout(() => {
+                    certCurrentIndex = certTotalCards * 2 - 1;
+                    updateCertCarousel(false);
+                    certIsTransitioning = false;
+                }, 400);
+            } else {
+                setTimeout(() => {
+                    certIsTransitioning = false;
+                }, 400);
+            }
+        }
+        
+        document.getElementById('cert-prev').addEventListener('click', certPrev);
+        document.getElementById('cert-next').addEventListener('click', certNext);
+        
+        // Touch/swipe support
+        let certTouchStartX = 0;
+        let certTouchEndX = 0;
+        
+        const certCarousel = document.getElementById('cert-carousel');
+        
+        certCarousel.addEventListener('touchstart', (e) => {
+            certTouchStartX = e.changedTouches[0].screenX;
+        });
+        
+        certCarousel.addEventListener('touchend', (e) => {
+            certTouchEndX = e.changedTouches[0].screenX;
+            handleCertSwipe();
+        });
+        
+        function handleCertSwipe() {
+            const swipeThreshold = 50;
+            if (certTouchStartX - certTouchEndX > swipeThreshold) {
+                // Swipe left - go next
+                certNext();
+            } else if (certTouchEndX - certTouchStartX > swipeThreshold) {
+                // Swipe right - go prev
+                certPrev();
+            }
+        }
+        
+        // Initialize and handle window resize
+        window.addEventListener('resize', () => {
+            updateCertCardsPerView();
+            cloneCertCards();
+        });
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateCertCardsPerView();
+            cloneCertCards();
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+       
+        let currentHeroSlide = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const totalHeroSlides = heroSlides.length;
+        let heroInterval;
+
+        function showHeroSlide(index) {
+            // Remover clase active de todas
+            heroSlides.forEach(slide => slide.classList.remove('active'));
+            
+            // Calcular el índice correcto (cíclico)
+            if (index >= totalHeroSlides) currentHeroSlide = 0;
+            else if (index < 0) currentHeroSlide = totalHeroSlides - 1;
+            else currentHeroSlide = index;
+
+            // Activar la nueva imagen
+            heroSlides[currentHeroSlide].classList.add('active');
+        }
+
+        function nextHeroImage() {
+            showHeroSlide(currentHeroSlide + 1);
+            resetHeroTimer(); // Reiniciar el contador si se toca manual
+        }
+
+        function prevHeroImage() {
+            showHeroSlide(currentHeroSlide - 1);
+            resetHeroTimer();
+        }
+
+        function startHeroTimer() {
+            heroInterval = setInterval(() => {
+                showHeroSlide(currentHeroSlide + 1);
+            }, 8000); // Cambia cada 5000ms (5 segundos)
+        }
+
+        function resetHeroTimer() {
+            clearInterval(heroInterval);
+            startHeroTimer();
+        }
+
+        // Iniciar el carrusel al cargar
+        startHeroTimer();
+    </script>
+
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c4710fad0756df2',t:'MTc2OTUwNDQ5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+ 
+ 
+ 
+ </body>
+</html>
