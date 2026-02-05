@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mendoza &amp; Tapia | Ingeniería y Supervisión de Obras</title>
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/FECC09/building.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-        /* FIX RESPONSIVE: Evita pantalla blanca a la derecha */
-        /* FIX RESPONSIVE: Evita pantalla blanca a la derecha */
+        
         html, body {
             box-sizing: border-box;
-            overflow-x: hidden !important; /* Oculta desborde horizontal */
+            overflow-x: hidden !important; 
             width: 100%;
             margin: 0;
             padding: 0;
             
-            /* CORRECCIÓN SCROLL: Esto permite que la barra detecte que bajas */
+
             height: auto !important; 
             overflow-y: auto !important;
         }
@@ -26,9 +26,9 @@
 h1, h2, h3, .btn-primary {
     font-family: 'Montserrat', sans-serif;
 }
-/* Ajuste de Título Principal RESPONSIVE */
+
         #hero-headline {
-            /* Se adapta: chico en celular (1.8rem), grande en PC (3.5rem) */
+           
             font-size: clamp(1.8rem, 5vw, 3.5rem) !important; 
             text-transform: none !important;
             font-weight: 800 !important;
@@ -79,16 +79,29 @@ h1, h2, h3, .btn-primary {
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
             
         }
+        /* --- SISTEMA DE ANIMACIONES MEJORADO --- */
         .reveal {
-    opacity: 0;
-    transform: translateY(50px); 
-    transition: all 1s ease-out; 
-}
+            opacity: 0;
+            transition: all 1s ease-out;
+            /* Por defecto viene de abajo */
+            transform: translateY(50px); 
+        }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0); 
-}
+        /* Variación: Viene de la IZQUIERDA */
+        .reveal.from-left {
+            transform: translateX(-100px) !important;
+        }
+
+        /* Variación: Viene de la DERECHA */
+        .reveal.from-right {
+            transform: translateX(100px) !important;
+        }
+
+        /* ESTADO ACTIVO (Posición final original) */
+        .reveal.active {
+            opacity: 1;
+            transform: translate(0, 0) !important;
+        }
         
         .category-card {
             transition: all 0.3s ease;
@@ -239,10 +252,7 @@ h1, h2, h3, .btn-primary {
         body {
             background-color: transparent !important; 
         }
-        #nosotros, #carreras, footer, .service-card {
-            background-color: rgba(0, 78, 124, 0.85) !important; 
-            backdrop-filter: blur(5px); 
-        }
+        
         #hero-headline, #hero-subheadline {
             text-shadow: 0 2px 15px rgba(0,0,0,0.9);
         }
@@ -260,6 +270,13 @@ h1, h2, h3, .btn-primary {
                 grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
             }
         }
+        
+        
+        /* Contenedor fijo al fondo (detrás del texto) */
+        /* CORRECCIÓN: Edificio Centrado y Sutil */
+        
+        
+
     </style>
     
   <style>
@@ -299,20 +316,16 @@ h1, h2, h3, .btn-primary {
 .gentle-pulse { animation: gentlePulse 2.5s ease-in-out infinite; }
   </style>
  </head>
- <body class="h-full" style="background-color: #ffffff;"><!-- Navigation -->
- <canvas id="tech-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; background-color: #004e7c;"></canvas>
+ <body class="h-full" style="background-color: #ffffff;">
+   
+    <!-- Navigation -->
     <nav id="main-navbar" style="background-color: transparent; position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 80px; display: flex; align-items: center; transition: background-color 0.4s ease, box-shadow 0.4s ease;">
   
   <div style="width: 100%; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto;">
    
-   <div style="display: flex; align-items: center; gap: 0.75rem;">
-    <svg width="40" height="40" viewBox="0 0 40 40" style="color: #FECC09; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); flex-shrink: 0;">
-        <rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" /> 
-        <path d="M10 20 L20 10 L30 20 L20 30 Z" fill="currentColor" /> 
-        <circle cx="20" cy="20" r="3" fill="#004e7c" />
-    </svg>
-    <span style="color: white; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); white-space: nowrap;">
-        Mendoza &amp; Tapia
+   <div style="display: flex; align-items: center;">
+    <span style="color: white; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); white-space: nowrap; color: #FECC09;">
+        MyT
     </span>
    </div>
 
@@ -321,8 +334,11 @@ h1, h2, h3, .btn-primary {
     <a href="#nosotros" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Nosotros</a> 
     <a href="#obras" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Obras</a> 
     <a href="#servicios" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Servicios</a> 
-    <a href="#carreras" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Carreras</a> 
     <a href="#certificaciones" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Certificaciones</a> 
+    
+    <a href="#noticias" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Noticias</a>
+    
+    <a href="#carreras" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Carreras</a> 
     <a href="#contacto" class="nav-link" style="color: white; font-weight: 500; text-decoration: none; font-size: 0.875rem;">Contacto</a>
    </div>
    
@@ -374,26 +390,34 @@ h1, h2, h3, .btn-primary {
         repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px);
     padding: 3rem 2rem;
  ">
-    <div class="flex flex-col md:flex-row justify-around items-center gap-10 md:gap-8 w-full max-w-[1600px] mx-auto">
+    <div class="flex flex-col md:flex-row justify-around items-center gap-8 md:gap-8 w-full max-w-[1600px] mx-auto" id="stats-section">
 
-      <div style="text-align: center;" class="reveal">
-       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">+25</div>
-       <div class="text-white text-xl font-semibold tracking-wide uppercase">Años de experiencia</div>
+      <div style="text-align: center;" class="reveal from-left">
+       <div class="text-4xl md:text-5xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">
+         +<span class="counter" data-target="25">0</span>
+       </div>
+       <div class="text-white text-base md:text-lg font-semibold tracking-wide uppercase">Años de experiencia</div>
       </div>
 
       <div style="text-align: center;" class="reveal">
-       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">+150</div>
-       <div class="text-white text-xl font-semibold tracking-wide uppercase">Proyectos ejecutados</div>
+       <div class="text-4xl md:text-5xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">
+         +<span class="counter" data-target="150">0</span>
+       </div>
+       <div class="text-white text-base md:text-lg font-semibold tracking-wide uppercase">Proyectos ejecutados</div>
       </div>
 
       <div style="text-align: center;" class="reveal">
-       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">+50</div>
-       <div class="text-white text-xl font-semibold tracking-wide uppercase">Profesionales</div>
+       <div class="text-4xl md:text-5xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">
+         +<span class="counter" data-target="50">0</span>
+       </div>
+       <div class="text-white text-base md:text-lg font-semibold tracking-wide uppercase">Profesionales</div>
       </div>
 
-      <div style="text-align: center;" class="reveal">
-       <div class="text-6xl md:text-7xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">100%</div>
-       <div class="text-white text-xl font-semibold tracking-wide uppercase">Compromiso</div>
+      <div style="text-align: center;" class="reveal from-right">
+       <div class="text-4xl md:text-5xl font-extrabold text-[#FECC09] mb-2 tracking-tighter">
+         <span class="counter" data-target="100">0</span>%
+       </div>
+       <div class="text-white text-base md:text-lg font-semibold tracking-wide uppercase">Compromiso</div>
       </div>
 
     </div>
@@ -411,13 +435,14 @@ h1, h2, h3, .btn-primary {
     <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.15); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
      NOSOTROS
     </div>
-    <h2 class="reveal" style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1.5rem; transition-delay: 0.2s;">Mendoza &amp; Tapia</h2>
+    <h2 class="reveal from-left" style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1.5rem; transition-delay: 0.2s;">Mendoza &amp; Tapia</h2>
     <p id="company-description" class="reveal" style="color: rgba(255, 255, 255, 0.85); font-size: 1.125rem; line-height: 1.8; max-width: 900px; margin: 0 auto; transition-delay: 0.4s;">Somos una empresa líder en supervisión de obras e infraestructura, especializada en proyectos de alta complejidad para instituciones públicas y empresas privadas. Nuestro equipo de profesionales altamente calificados garantiza el cumplimiento de estándares internacionales de calidad, seguridad y eficiencia en cada proyecto.</p>
    </div>
    
    <div class="mission-vision-values-grid" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
     
-    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'"";class="reveal from-left">
+        
      <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
       <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z" /> <path d="M2 17l10 5 10-5" /> <path d="M2 12l10 5 10-5" /></svg>
      </div>
@@ -433,7 +458,7 @@ h1, h2, h3, .btn-primary {
      <p id="vision-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Ser reconocidos como la empresa líder en supervisión de obras e infraestructura en América Latina.</p>
     </div>
 
-    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'";class="reveal from-right">
      <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
       <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg>
      </div>
@@ -444,6 +469,31 @@ h1, h2, h3, .btn-primary {
    </div>
 
  </section>
+ <section id="video-corporativo" style="padding: 6rem 2rem; background-color: #f8f9fa;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    
+    <div style="margin-bottom: 3rem;">
+      <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.1); color: #004e7c; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
+        CONÓCENOS
+      </div>
+      <h2 class="reveal from-left" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem;">Nuestra Trayectoria en Video</h2>
+      <p class="reveal from-right" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto;">Descubre más sobre nuestros proyectos y el impacto que generamos en cada obra.</p>
+    </div>
+
+    <div class="reveal" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0, 78, 124, 0.2);">
+      <iframe 
+        src="https://www.youtube.com/embed/xOOOFR-pixU?si=TuParametroDeSeguimiento" 
+        title="Video Corporativo Mendoza & Tapia"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
  <section id="obras" style="padding: 6rem 2rem; background-color: #ffffff;">
    <div style="max-width: 1400px; margin: 0 auto;"><!-- Section Header -->
     <div style="text-align: center; margin-bottom: 3rem;">
@@ -474,7 +524,7 @@ h1, h2, h3, .btn-primary {
     <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.1); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;">
      SERVICIOS
     </div>
-    <h2 class="reveal" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Soluciones Integrales en Ingeniería</h2>
+    <h2 class="reveal from-left" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Soluciones Integrales en Ingeniería</h2>
     <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto; transition-delay: 0.4s;">Ofrecemos servicios especializados para garantizar el éxito de sus proyectos de infraestructura</p>
    </div>
    <div class="responsive-grid">
@@ -540,7 +590,7 @@ h1, h2, h3, .btn-primary {
     </div>
    </div>
   </div><!-- Certifications Section -->
-  <section id="certificaciones" style="padding: 4rem 2rem; background-color: #ffffff;">
+  <section id="certificaciones" style="padding: 2rem 2rem 4rem 2rem; background-color: #ffffff; scroll-margin-top: 100px;">
    <div style="max-width: 1200px; margin: 0 auto;">
     <div style="text-align: center; margin-bottom: 2.5rem;">
      <h2 style="color: #004e7c; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem;">Certificaciones y Reconocimientos</h2>
@@ -619,7 +669,7 @@ h1, h2, h3, .btn-primary {
     <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.05); color: #004e7c; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
      NOTICIAS
     </div>
-    <h2 class="reveal" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Actualizaciones Corporativas</h2>
+    <h2 class="reveal from-left" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Actualizaciones Corporativas</h2>
     <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto; transition-delay: 0.4s;">Las últimas novedades sobre nuestros proyectos y logros institucionales</p>
    </div>
    
@@ -663,11 +713,11 @@ h1, h2, h3, .btn-primary {
  </section><!-- Contact Section -->
   <section id="contacto" style="
     padding: 6rem 2rem; 
-    /* Aquí ponemos la imagen con una capa azul semitransparente encima para que se vea elegante */
+
     background-image: linear-gradient(rgba(0, 78, 124, 0.85), rgba(0, 78, 124, 0.75)), url('./Fondo4-web.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto Parallax: la imagen se queda quieta al bajar */
+    background-attachment: fixed; 
  ">
    <div style="max-width: 1200px; margin: 0 auto;">
     
@@ -775,8 +825,13 @@ h1, h2, h3, .btn-primary {
        </div>
        <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin: 0;">Formulario de Postulación</h3>
       </div>
-      <form id="career-form" action="https://formspree.io/f/xlgbkyjq" method="POST" enctype="multipart/form-data">
-       
+      <form id="career-form" action="https://formsubmit.co/ejapontep@gmail.com" method="POST" enctype="multipart/form-data">
+        
+        <input type="hidden" name="_subject" value="Nueva Postulación (CV) - Web Mendoza & Tapia">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        
        <div style="margin-bottom: 1.5rem;">
         <label for="career-name" style="display: block; color: white; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Nombre Completo *</label> 
         <input type="text" id="career-name" name="nombre_postulante" required style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; background-color: rgba(255, 255, 255, 0.05); color: white;">
@@ -1661,11 +1716,61 @@ h1, h2, h3, .btn-primary {
 
         // Iniciar el carrusel al cargar
         startHeroTimer();
+        // ... (código anterior del carrusel) ...
+        
+        function resetHeroTimer() {
+            clearInterval(heroInterval);
+            startHeroTimer();
+        }
+
+        // Iniciar el carrusel al cargar
+        startHeroTimer();
+
+        
+        // --- EFECTO DE CONTEO NUMÉRICO (COUNTER UP) ---
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Mientras más alto, más lento
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    // Calcular el paso para que todos terminen al mismo tiempo aprox
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Activarlo solo cuando se vea en pantalla
+        const statsSection = document.getElementById('stats-section');
+        if(statsSection) {
+            const observerStats = new IntersectionObserver((entries) => {
+                if(entries[0].isIntersecting) {
+                    animateCounters();
+                    observerStats.disconnect(); // Solo animar una vez
+                }
+            });
+            observerStats.observe(statsSection);
+        }
+   </script> ```
+
+¡Eso es todo! Solo asegúrate de que esté **dentro** de las etiquetas `<script>` y `</script>`.
     </script>
 
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c4710fad0756df2',t:'MTc2OTUwNDQ5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
- 
- 
- 
+
+ <a href="https://wa.me/51912356493?text=Hola,%20quisiera%20información%20sobre%20sus%20servicios%20de%20supervisión." target="_blank" style="position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 9999; transition: all 0.3s ease; text-decoration: none;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.536 0 1.52 1.115 2.988 1.264 3.186.149.198 2.19 3.349 5.302 4.695.742.321 1.321.514 1.771.657.737.234 1.408.2 1.944.12.597-.088 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.381a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.815 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.815 0 00-3.48-8.413Z"/></svg>
+ </a>
  </body>
 </html>
