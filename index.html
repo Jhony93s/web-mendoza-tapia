@@ -78,25 +78,25 @@ h1, h2, h3, .btn-primary {
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
             
         }
-        /* --- SISTEMA DE ANIMACIONES MEJORADO --- */
+        
         .reveal {
             opacity: 0;
             transition: all 1s ease-out;
-            /* Por defecto viene de abajo */
+           
             transform: translateY(50px); 
         }
 
-        /* Variación: Viene de la IZQUIERDA */
+        
         .reveal.from-left {
             transform: translateX(-100px) !important;
         }
 
-        /* Variación: Viene de la DERECHA */
+       
         .reveal.from-right {
             transform: translateX(100px) !important;
         }
 
-        /* ESTADO ACTIVO (Posición final original) */
+      
         .reveal.active {
             opacity: 1;
             transform: translate(0, 0) !important;
@@ -255,39 +255,36 @@ h1, h2, h3, .btn-primary {
         #hero-headline, #hero-subheadline {
             text-shadow: 0 2px 15px rgba(0,0,0,0.9);
         }
-        /* --- CORRECCIÓN GRILLAS INTELIGENTES --- */
+       
         .responsive-grid {
             display: grid;
-            gap: 2rem;
-            /* Por defecto (Móvil): Tarjetas pequeñas para que quepan */
+          
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
-        /* En pantallas medianas y grandes (PC): Volvemos al tamaño original */
+       
         @media (min-width: 1024px) {
             .responsive-grid {
                 grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
             }
         }
         
-        
-        /* Contenedor fijo al fondo (detrás del texto) */
-        /* CORRECCIÓN: Edificio Centrado y Sutil */
+       
         
         
 
     </style>
     
   <style>
-  /* --- CORRECCIÓN: Tarjetas de Servicios Sólidas --- */
+
         .service-card {
-            /* Forzamos el azul sólido sin transparencia */
+            
             background-color: #004e7c !important; 
-            /* Quitamos el filtro borroso si lo tuviera */
+            
             backdrop-filter: none !important; 
-            /* Aseguramos que la opacidad sea total */
+         
             opacity: 1 !important;
-            /* Sombra para que resalten sobre el fondo gris */
+           
             box-shadow: 0 10px 25px rgba(0, 78, 124, 0.2) !important;
         }
   
@@ -349,7 +346,7 @@ h1, h2, h3, .btn-primary {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Para que la imagen no se salga si hace zoom */
+    overflow: hidden;
  ">
   <div id="hero-carousel">
       <div class="hero-slide active" style="background-image: url('./Fondo5-web.jpg');"></div>
@@ -381,7 +378,7 @@ h1, h2, h3, .btn-primary {
  <section style="
     background-color: #004e7c; 
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    /* CUADRÍCULA GRANDE Y ELEGANTE */
+    
     background-image: 
         repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px), 
         repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px);
@@ -1711,7 +1708,7 @@ h1, h2, h3, .btn-primary {
 
         function nextHeroImage() {
             showHeroSlide(currentHeroSlide + 1);
-            resetHeroTimer(); // Reiniciar el contador si se toca manual
+            resetHeroTimer(); 
         }
 
         function prevHeroImage() {
@@ -1773,14 +1770,12 @@ h1, h2, h3, .btn-primary {
             const observerStats = new IntersectionObserver((entries) => {
                 if(entries[0].isIntersecting) {
                     animateCounters();
-                    observerStats.disconnect(); // Solo animar una vez
+                    observerStats.disconnect(); 
                 }
             });
             observerStats.observe(statsSection);
         }
    </script> ```
-
-¡Eso es todo! Solo asegúrate de que esté **dentro** de las etiquetas `<script>` y `</script>`.
     </script>
 
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c4710fad0756df2',t:'MTc2OTUwNDQ5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
