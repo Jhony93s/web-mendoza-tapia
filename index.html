@@ -262,23 +262,35 @@ h1, h2, h3, .btn-primary {
       
         .responsive-grid {
             display: grid;
+            gap: 2rem !important; 
             
-            gap: 4rem !important; 
-            
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: 1fr; 
             width: 100%;
             justify-content: center;
         }
 
-       
-        @media (min-width: 1024px) {
+        
+        @media (min-width: 768px) {
             .responsive-grid {
-               
-                grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)) !important;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+                gap: 4rem !important;
             }
         }
         
-       
+       /* NUEVO: Forzar tarjetas del carrusel al 100% en móvil */
+        #cert-carousel > div {
+            flex: 0 0 100%; /* Ocupa todo el ancho */
+            max-width: 100%;
+            margin-right: 0; /* Quitamos márgenes raros */
+        }
+        
+        /* En PC vuelven a su tamaño normal */
+        @media (min-width: 768px) {
+            #cert-carousel > div {
+                flex: 0 0 auto; /* Tamaño automático */
+                min-width: 200px;
+            }
+        }
         
         
 
@@ -595,7 +607,7 @@ h1, h2, h3, .btn-primary {
       <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2.5"><path d="M9 18l6-6-6-6" />
       </svg></button> <!-- Carousel Container -->
      <div id="cert-carousel-container" style="overflow: hidden; position: relative;">
-      <div id="cert-carousel" style="display: flex; gap: 1.5rem; transition: transform 0.4s ease; touch-action: pan-y;"><!-- ISO 9001 -->
+      <div id="cert-carousel" style="display: flex; gap: 1.5rem; transition: transform 0.4s ease; touch-action: pan-y;align-items: center;"><!-- ISO 9001 -->
        <div onclick="openCertModal('iso9001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
         <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
          <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M9 11l3 3L22 4" /> <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
@@ -783,7 +795,7 @@ h1, h2, h3, .btn-primary {
           </div>
           <div>
            <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Email</h4>
-           <p id="company-email" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">contacto@mendozatapia.com<br>proyectos@mendozatapia.com</p>
+           <p id="company-email" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6; word-break: break-all;">contacto@mendozatapia.com<br>proyectos@mendozatapia.com</p>
           </div>
          </div>
         </div>
