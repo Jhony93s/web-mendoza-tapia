@@ -277,21 +277,35 @@ h1, h2, h3, .btn-primary {
             }
         }
         
-       /* NUEVO: Forzar tarjetas del carrusel al 100% en móvil */
+      
         #cert-carousel > div {
-            flex: 0 0 100%; /* Ocupa todo el ancho */
+            flex: 0 0 100%; 
             max-width: 100%;
-            margin-right: 0; /* Quitamos márgenes raros */
+            margin-right: 0; 
         }
         
-        /* En PC vuelven a su tamaño normal */
+        
         @media (min-width: 768px) {
             #cert-carousel > div {
-                flex: 0 0 auto; /* Tamaño automático */
+                flex: 0 0 auto; 
                 min-width: 200px;
             }
         }
-        
+        @media (max-width: 768px) {
+            #cert-prev {
+                left: 0 !important; 
+                background-color: rgba(42, 111, 151, 0.8) !important; 
+            }
+            #cert-next {
+                right: 0 !important; 
+                background-color: rgba(42, 111, 151, 0.8) !important;
+            }
+            
+            #cert-prev, #cert-next {
+                width: 35px !important;
+                height: 35px !important;
+            }
+        }
         
 
     </style>
@@ -668,7 +682,7 @@ h1, h2, h3, .btn-primary {
    </div>
   </div><!-- News Section -->
   <section id="noticias" style="width: 100%; padding: 6rem 0; background-color: #f0f7ff;">
-  <div style="max-width: 1400px; margin: 0 auto; padding: 0 2 rem">
+  <div style="max-width: 1400px; margin: 0 auto; padding: 0 1.5rem;">
    
    <div style="text-align: center; margin-bottom: 4rem;">
     <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.05); color: #2A6F97; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
