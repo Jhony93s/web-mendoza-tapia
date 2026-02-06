@@ -40,7 +40,7 @@ h1, h2, h3, .btn-primary {
 }
         
         :root {
-            --primary-blue: #004e7c;
+            --primary-blue: #2A6F97;
             --accent-yellow: #FECC09;
         }
         
@@ -205,7 +205,7 @@ h1, h2, h3, .btn-primary {
         }
         
         select option {
-            background-color: #004e7c; 
+            background-color: #2A6F97; 
             color: white; 
         }
        
@@ -245,7 +245,7 @@ h1, h2, h3, .btn-primary {
         }
         .carousel-btn:hover {
             background-color: #FECC09;
-            color: #004e7c;
+            color: #2A6F97;
         }
         
         body {
@@ -256,16 +256,22 @@ h1, h2, h3, .btn-primary {
             text-shadow: 0 2px 15px rgba(0,0,0,0.9);
         }
        
+      
         .responsive-grid {
             display: grid;
-          
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            
+            gap: 4rem !important; 
+            
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            width: 100%;
+            justify-content: center;
         }
 
        
         @media (min-width: 1024px) {
             .responsive-grid {
-                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
+               
+                grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)) !important;
             }
         }
         
@@ -279,7 +285,7 @@ h1, h2, h3, .btn-primary {
 
         .service-card {
             
-            background-color: #004e7c !important; 
+            background-color: #2A6F97 !important; 
             
             backdrop-filter: none !important; 
          
@@ -376,7 +382,7 @@ h1, h2, h3, .btn-primary {
  <!-- Portfolio Section -->
   
  <section style="
-    background-color: #004e7c; 
+    background-color: #2A6F97; 
     border-bottom: 1px solid rgba(255,255,255,0.1);
     
     background-image: 
@@ -418,59 +424,59 @@ h1, h2, h3, .btn-primary {
  </section> 
  <section id="nosotros" style="
     padding: 6rem 2rem; 
-    background-color: #004e7c; 
-    
+    background-color: #2A6F97; 
     background-image: 
         repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px), 
         repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255, 255, 255, 0.05) 79px, rgba(255, 255, 255, 0.05) 80px);
  ">
   <div style="max-width: 1400px; margin: 0 auto;">
+   
    <div style="text-align: center; margin-bottom: 5rem;">
     <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.15); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
      NOSOTROS
     </div>
-    <h2 class="reveal from-left" style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1.5rem; transition-delay: 0.2s;">Mendoza &amp; Tapia</h2>
-    <p id="company-description" class="reveal" style="color: rgba(255, 255, 255, 0.85); font-size: 1.125rem; line-height: 1.8; max-width: 900px; margin: 0 auto; transition-delay: 0.4s;">Somos una empresa líder en supervisión de obras e infraestructura, especializada en proyectos de alta complejidad para instituciones públicas y empresas privadas. Nuestro equipo de profesionales altamente calificados garantiza el cumplimiento de estándares internacionales de calidad, seguridad y eficiencia en cada proyecto.</p>
+    <h2 class="reveal from-left" style="color: white; font-size: 2.75rem; font-weight: 700; margin-bottom: 1.5rem; transition-delay: 0.2s;">¿Quiénes somos?</h2>
+    <p id="company-description" class="reveal from-right" style="color: rgba(255, 255, 255, 0.85); font-size: 1.125rem; line-height: 1.8; max-width: 900px; margin: 0 auto; transition-delay: 0.4s;">Somos una empresa líder en supervisión de obras e infraestructura, especializada en proyectos de alta complejidad para instituciones públicas y empresas privadas. Nuestro equipo de profesionales altamente calificados garantiza el cumplimiento de estándares internacionales de calidad, seguridad y eficiencia en cada proyecto.</p>
    </div>
    
-   <div class="mission-vision-values-grid" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+   <div class="mission-vision-values-grid" style="display: flex; gap: 4rem; justify-content: center; flex-wrap: wrap;">
     
-    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'"";class="reveal from-left">
-        
-     <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
-      <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z" /> <path d="M2 17l10 5 10-5" /> <path d="M2 12l10 5 10-5" /></svg>
+    <div class="reveal from-left" style="flex: 1; min-width: 280px; max-width: 350px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+     <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z" /> <path d="M2 17l10 5 10-5" /> <path d="M2 12l10 5 10-5" /></svg>
      </div>
-     <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Misión</h3>
-     <p id="mission-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Brindar servicios de supervisión y gerencia de proyectos de infraestructura con los más altos estándares de calidad.</p>
+     <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Misión</h3>
+     <p id="mission-text" style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; font-size: 1rem;">Brindar servicios de supervisión y gerencia de proyectos de infraestructura con los más altos estándares de calidad.</p>
     </div>
 
-    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-     <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
-      <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="12" r="10" /> <path d="M12 6v6l4 2" /></svg>
+    <div class="reveal" style="flex: 1; min-width: 280px; max-width: 350px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+     <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="12" r="10" /> <path d="M12 6v6l4 2" /></svg>
      </div>
-     <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Visión</h3>
-     <p id="vision-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Ser reconocidos como la empresa líder en supervisión de obras e infraestructura en América Latina.</p>
+     <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Visión</h3>
+     <p id="vision-text" style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; font-size: 1rem;">Ser reconocidos como la empresa líder en supervisión de obras e infraestructura en América Latina.</p>
     </div>
 
-    <div style="background-color: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); flex: 1; min-width: 300px; max-width: 380px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'";class="reveal from-right">
-     <div style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 10px rgba(0, 78, 124, 0.3);">
-      <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg>
+    <div class="reveal from-right" style="flex: 1; min-width: 280px; max-width: 350px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+     <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg>
      </div>
-     <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Valores</h3>
-     <p id="values-text" style="color: #4a5568; line-height: 1.7; font-size: 1rem;">Integridad profesional, transparencia en cada proceso, compromiso con la excelencia y responsabilidad social.</p>
+     <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Valores</h3>
+     <p id="values-text" style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; font-size: 1rem;">Integridad profesional, transparencia en cada proceso, compromiso con la excelencia y responsabilidad social.</p>
     </div>
 
    </div>
 
+  </div>
  </section>
  <section id="video-corporativo" style="padding: 6rem 2rem; background-color: #dbeafe;">
   <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
     
     <div style="margin-bottom: 3rem;">
-      <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.1); color: #004e7c; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
+      <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.1); color: #2A6F97; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
         CONÓCENOS
       </div>
-      <h2 class="reveal from-left" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem;">Nuestra Trayectoria en Video</h2>
+      <h2 class="reveal from-left" style="color: #2A6F97; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem;">Nuestra Trayectoria en Video</h2>
       <p class="reveal from-right" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto;">Descubre más sobre nuestros proyectos y el impacto que generamos en cada obra.</p>
     </div>
 
@@ -494,37 +500,37 @@ h1, h2, h3, .btn-primary {
      <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.1); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;">
       PORTAFOLIO
      </div>
-     <h2 class="reveal" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Proyectos Supervisados</h2>
+     <h2 class="reveal" style="color: #2A6F97; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Proyectos Supervisados</h2>
      <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 900px; margin: 0 auto; transition-delay: 0.4s;">Una selección completa de proyectos en supervisión de obras e infraestructura</p>
     </div><!-- Category Cards -->
     <div id="category-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;"><!-- Category cards will be rendered here -->
     </div><!-- Projects Content -->
-    <div id="portfolio-content" style="display: none;"><!-- Back button --> <button onclick="backToCategories()" style="display: flex; align-items: center; gap: 0.75rem; background-color: #004e7c; color: white; padding: 0.875rem 1.75rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 2.5rem; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#054a73'" onmouseout="this.style.backgroundColor='#004e7c'">
+    <div id="portfolio-content" style="display: none;"><!-- Back button --> <button onclick="backToCategories()" style="display: flex; align-items: center; gap: 0.75rem; background-color: #2A6F97; color: white; padding: 0.875rem 1.75rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 2.5rem; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#054a73'" onmouseout="this.style.backgroundColor='#2A6F97'">
       <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7" />
       </svg> Volver a Categorías </button> <!-- Category Title -->
      <div id="category-header" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 3px solid #FECC09;">
-      <div id="category-icon" style="width: 70px; height: 70px; background-color: #004e7c; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+      <div id="category-icon" style="width: 70px; height: 70px; background-color: #2A6F97; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
       </div>
-      <h3 id="category-title" style="color: #004e7c; font-size: 2rem; font-weight: 700; margin: 0;"></h3>
+      <h3 id="category-title" style="color: #2A6F97; font-size: 2rem; font-weight: 700; margin: 0;"></h3>
      </div><!-- Projects Grid -->
      <div id="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;"><!-- Projects will be rendered here -->
      </div>
     </div>
    </div>    
  <!-- Services Section -->
- </section>
+ 
   <section id="servicios" style="width: 100%; padding: 6rem 0; background-color: #dbeafe;">
   <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
    <div style="text-align: center; margin-bottom: 4rem;">
     <div class="reveal" style="display: inline-block; background-color: rgba(254, 204, 9, 0.1); color: #FECC09; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 1rem;">
      SERVICIOS
     </div>
-    <h2 class="reveal from-left" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Soluciones Integrales en Ingeniería</h2>
+    <h2 class="reveal from-left" style="color: #2A6F97; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Soluciones Integrales en Ingeniería</h2>
     <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto; transition-delay: 0.4s;">Ofrecemos servicios especializados para garantizar el éxito de sus proyectos de infraestructura</p>
    </div>
    <div class="responsive-grid">
     
-    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="service-card" style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
      <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
       <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M9 11l3 3L22 4" /> <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
      </div>
@@ -532,7 +538,7 @@ h1, h2, h3, .btn-primary {
      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Control técnico, administrativo y financiero durante todas las etapas de ejecución de proyectos de infraestructura.</p>
     </div>
 
-    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="service-card" style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
      <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
       <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /> <path d="M9 21V9" /></svg>
      </div>
@@ -540,7 +546,7 @@ h1, h2, h3, .btn-primary {
      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Dirección integral de proyectos desde la planificación hasta la entrega final, asegurando plazos y presupuestos.</p>
     </div>
 
-    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="service-card" style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
      <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
       <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /> <polyline points="9 22 9 12 15 12 15 22" /></svg>
      </div>
@@ -548,7 +554,7 @@ h1, h2, h3, .btn-primary {
      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Supervisión especializada en proyectos de edificaciones comerciales, institucionales y residenciales de gran escala.</p>
     </div>
 
-    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="service-card" style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
      <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
       <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
      </div>
@@ -556,7 +562,7 @@ h1, h2, h3, .btn-primary {
      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Gestión y supervisión de infraestructura hospitalaria con estándares internacionales de salud y seguridad.</p>
     </div>
 
-    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="service-card" style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
      <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
       <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /> <polyline points="7.5 4.21 12 6.81 16.5 4.21" /> <polyline points="7.5 19.79 7.5 14.6 3 12" /> <polyline points="21 12 16.5 14.6 16.5 19.79" /> <polyline points="3.27 6.96 12 12.01 20.73 6.96" /> <line x1="12" y1="22.08" x2="12" y2="12" /></svg>
      </div>
@@ -564,7 +570,7 @@ h1, h2, h3, .btn-primary {
      <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; text-align: justify;">Supervisión de infraestructura vial compleja, puentes, túneles y sistemas de transporte urbano.</p>
     </div>
 
-    <div class="service-card" style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div class="service-card" style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
      <div style="width: 70px; height: 70px; background-color: rgba(254, 204, 9, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
       <svg width="36" height="36" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8" /> <line x1="16" y1="13" x2="8" y2="13" /> <line x1="16" y1="17" x2="8" y2="17" /> <polyline points="10 9 9 9 8 9" /></svg>
      </div>
@@ -588,46 +594,46 @@ h1, h2, h3, .btn-primary {
   <section id="certificaciones" style="padding: 2rem 2rem 4rem 2rem; background-color: #ffffff; scroll-margin-top: 100px;">
    <div style="max-width: 1200px; margin: 0 auto;">
     <div style="text-align: center; margin-bottom: 2.5rem;">
-     <h2 style="color: #004e7c; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem;">Certificaciones y Reconocimientos</h2>
+     <h2 style="color: #2A6F97; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem;">Certificaciones y Reconocimientos</h2>
      <p style="color: #4a5568; font-size: 0.9375rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">Nuestras certificaciones internacionales respaldan nuestro compromiso con la calidad, cumplimiento normativo y estándares globales en cada proyecto</p>
     </div>
-    <div style="position: relative; max-width: 1100px; margin: 0 auto;"><!-- Navigation Arrows --> <button id="cert-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: #004e7c; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease; opacity: 0.7;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='#054a73'" onmouseout="this.style.opacity='0.7'; this.style.backgroundColor='#004e7c'">
+    <div style="position: relative; max-width: 1100px; margin: 0 auto;"><!-- Navigation Arrows --> <button id="cert-prev" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: #2A6F97; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease; opacity: 0.7;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='#054a73'" onmouseout="this.style.opacity='0.7'; this.style.backgroundColor='#2A6F97'">
       <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2.5"><path d="M15 18l-6-6 6-6" />
-      </svg></button> <button id="cert-next" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: #004e7c; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease; opacity: 0.7;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='#054a73'" onmouseout="this.style.opacity='0.7'; this.style.backgroundColor='#004e7c'">
+      </svg></button> <button id="cert-next" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background-color: #2A6F97; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease; opacity: 0.7;" onmouseover="this.style.opacity='1'; this.style.backgroundColor='#054a73'" onmouseout="this.style.opacity='0.7'; this.style.backgroundColor='#2A6F97'">
       <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2.5"><path d="M9 18l6-6-6-6" />
       </svg></button> <!-- Carousel Container -->
      <div id="cert-carousel-container" style="overflow: hidden; position: relative;">
       <div id="cert-carousel" style="display: flex; gap: 1.5rem; transition: transform 0.4s ease; touch-action: pan-y;"><!-- ISO 9001 -->
        <div onclick="openCertModal('iso9001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
         <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M9 11l3 3L22 4" /> <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M9 11l3 3L22 4" /> <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
          </svg>
         </div>
-        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 9001</h3>
+        <h3 style="color: #2A6F97; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 9001</h3>
         <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2015</p>
        </div><!-- ISO 14001 -->
        <div onclick="openCertModal('iso14001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
         <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M3 3h18v18H3z" /> <path d="M12 8v8m-4-4h8" />
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M3 3h18v18H3z" /> <path d="M12 8v8m-4-4h8" />
          </svg>
         </div>
-        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 14001</h3>
+        <h3 style="color: #2A6F97; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 14001</h3>
         <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2015</p>
        </div><!-- ISO 45001 -->
        <div onclick="openCertModal('iso45001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
         <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M20 7h-9M14 17H5M6 12l-2 2 2 2M18 12l2 2-2 2" /> <circle cx="12" cy="12" r="3" />
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M20 7h-9M14 17H5M6 12l-2 2 2 2M18 12l2 2-2 2" /> <circle cx="12" cy="12" r="3" />
          </svg>
         </div>
-        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 45001</h3>
+        <h3 style="color: #2A6F97; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 45001</h3>
         <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2018</p>
        </div><!-- ISO 37001 -->
        <div onclick="openCertModal('iso37001')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
         <div style="width: 60px; height: 60px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+         <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" />
          </svg>
         </div>
-        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 37001</h3>
+        <h3 style="color: #2A6F97; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">ISO 37001</h3>
         <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">2016</p>
        </div><!-- Award 1 -->
        <div onclick="openCertModal('award1')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
@@ -635,7 +641,7 @@ h1, h2, h3, .btn-primary {
          <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="8" r="7" /> <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
          </svg>
         </div>
-        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Premio Nacional</h3>
+        <h3 style="color: #2A6F97; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Premio Nacional</h3>
         <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">Excelencia</p>
        </div><!-- Award 2 -->
        <div onclick="openCertModal('award2')" style="background-color: #ffffff; padding: 1.75rem 1.25rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.3s ease; min-width: 200px; flex-shrink: 0;" onmouseover="this.style.borderColor='#FECC09'; this.style.boxShadow='0 4px 12px rgba(254, 204, 9, 0.15)'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.boxShadow='none'">
@@ -643,7 +649,7 @@ h1, h2, h3, .btn-primary {
          <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
          </svg>
         </div>
-        <h3 style="color: #004e7c; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Socio Estratégico</h3>
+        <h3 style="color: #2A6F97; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem;">Socio Estratégico</h3>
         <p style="color: #6b7280; font-size: 0.75rem; font-weight: 500;">Sector Público</p>
        </div>
       </div>
@@ -652,7 +658,7 @@ h1, h2, h3, .btn-primary {
    </div>
   </section><!-- Certification Modal -->
   <div id="cert-modal" class="modal">
-   <div style="background-color: white; max-width: 600px; width: 90%; margin: 2rem; border-radius: 8px; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3);"><button onclick="closeCertModal()" style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(0,0,0,0.1); color: #004e7c; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 300; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.2)'" onmouseout="this.style.backgroundColor='rgba(0,0,0,0.1)'">×</button>
+   <div style="background-color: white; max-width: 600px; width: 90%; margin: 2rem; border-radius: 8px; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3);"><button onclick="closeCertModal()" style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(0,0,0,0.1); color: #2A6F97; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 300; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.2)'" onmouseout="this.style.backgroundColor='rgba(0,0,0,0.1)'">×</button>
     <div id="cert-modal-content" style="padding: 2.5rem;"><!-- Content will be injected here -->
     </div>
    </div>
@@ -661,16 +667,16 @@ h1, h2, h3, .btn-primary {
   <div style="max-width: 1400px; margin: 0 auto;">
    
    <div style="text-align: center; margin-bottom: 4rem;">
-    <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.05); color: #004e7c; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
+    <div class="reveal" style="display: inline-block; background-color: rgba(0, 78, 124, 0.05); color: #2A6F97; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1rem;">
      NOTICIAS
     </div>
-    <h2 class="reveal from-left" style="color: #004e7c; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Actualizaciones Corporativas</h2>
+    <h2 class="reveal from-left" style="color: #2A6F97; font-size: 2.75rem; font-weight: 700; margin-bottom: 1rem; transition-delay: 0.2s;">Actualizaciones Corporativas</h2>
     <p class="reveal" style="color: #4a5568; font-size: 1.125rem; max-width: 800px; margin: 0 auto; transition-delay: 0.4s;">Las últimas novedades sobre nuestros proyectos y logros institucionales</p>
    </div>
    
    <div class="responsive-grid">
     
-    <div class="reveal" style="background-color: #004e7c; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+    <div class="reveal" style="background-color: #2A6F97; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
      <div style="height: 200px; background: linear-gradient(135deg, #054a73 0%, #021c30 100%); display: flex; align-items: center; justify-content: center;">
       <svg width="64" height="64" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /> <path d="M9 21V9" /></svg>
      </div>
@@ -681,7 +687,7 @@ h1, h2, h3, .btn-primary {
      </div>
     </div>
 
-    <div class="reveal" style="background-color: #004e7c; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition-delay: 0.2s;">
+    <div class="reveal" style="background-color: #2A6F97; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition-delay: 0.2s;">
      <div style="height: 200px; background: linear-gradient(135deg, #054a73 0%, #021c30 100%); display: flex; align-items: center; justify-content: center;">
       <svg width="64" height="64" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><circle cx="12" cy="8" r="7" /> <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></svg>
      </div>
@@ -692,7 +698,7 @@ h1, h2, h3, .btn-primary {
      </div>
     </div>
 
-    <div class="reveal" style="background-color: #004e7c; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition-delay: 0.4s;">
+    <div class="reveal" style="background-color: #2A6F97; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition-delay: 0.4s;">
      <div style="height: 200px; background: linear-gradient(135deg, #054a73 0%, #021c30 100%); display: flex; align-items: center; justify-content: center;">
       <svg width="64" height="64" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
      </div>
@@ -708,11 +714,10 @@ h1, h2, h3, .btn-primary {
  </section><!-- Contact Section -->
   <section id="contacto" style="
     padding: 6rem 2rem; 
-
     background-image: linear-gradient(rgba(0, 78, 124, 0.85), rgba(0, 78, 124, 0.75)), url('./Fondo4-web.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed;
  ">
    <div style="max-width: 1200px; margin: 0 auto;">
     
@@ -724,84 +729,79 @@ h1, h2, h3, .btn-primary {
      <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.125rem; max-width: 700px; margin: 0 auto;">Estamos listos para asesorarlo en la supervisión y gerencia de su próxima obra</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-     
-     <div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
-      <form action="https://formspree.io/f/xlgbkyjq" method="POST">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" style="margin-bottom: 4rem;"> <div style="background-color: white; padding: 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+       <form action="https://formspree.io/f/xlgbkyjq" method="POST">
         <div style="margin-bottom: 1.5rem;">
-            <label for="name" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Nombre Completo *</label> 
+            <label for="name" style="display: block; color: #2A6F97; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Nombre Completo *</label> 
             <input type="text" name="nombre" id="name" required style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
         </div>
         <div style="margin-bottom: 1.5rem;">
-            <label for="email" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Email Corporativo *</label> 
+            <label for="email" style="display: block; color: #2A6F97; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Email Corporativo *</label> 
             <input type="email" name="email" id="email" required style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
         </div>
         <div style="margin-bottom: 1.5rem;">
-            <label for="phone" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Teléfono *</label> 
+            <label for="phone" style="display: block; color: #2A6F97; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Teléfono *</label> 
             <input type="tel" name="telefono" id="phone" required style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
         </div>
         <div style="margin-bottom: 1.5rem;">
-            <label for="company" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Empresa / Institución</label> 
+            <label for="company" style="display: block; color: #2A6F97; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Empresa / Institución</label> 
             <input type="text" name="empresa" id="company" style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem;">
         </div>
         <div style="margin-bottom: 1.5rem;">
-            <label for="message" style="display: block; color: #004e7c; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Mensaje *</label> 
+            <label for="message" style="display: block; color: #2A6F97; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem;">Mensaje *</label> 
             <textarea name="mensaje" id="message" required rows="4" style="width: 100%; padding: 0.875rem; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; background-color: #FECC09; color: #004e7c;"> Enviar Mensaje </button>
-      </form>
-      <div id="form-message" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
-     </div>
-
-     <div>
-      <div style="background-color: rgba(0, 78, 124, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 12px; margin-bottom: 2rem;">
-       <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">Información de Contacto</h3>
-       
-       <div style="margin-bottom: 2rem;">
-        <div style="display: flex; align-items: start; gap: 1rem;">
-         <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3" /></svg>
-         </div>
-         <div>
-          <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Oficina Principal</h4>
-          <p id="office-address" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Av. Empresarial 2450, Edificio Corporativo Torre A, Piso 12, San Isidro, Lima, Perú</p>
-         </div>
-        </div>
-       </div>
-
-       <div style="margin-bottom: 2rem;">
-        <div style="display: flex; align-items: start; gap: 1rem;">
-         <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-         </div>
-         <div>
-          <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Teléfono</h4>
-          <p id="company-phone" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">+51 1 652-8800<br>+51 987 654 321</p>
-         </div>
-        </div>
-       </div>
-
-       <div>
-        <div style="display: flex; align-items: start; gap: 1rem;">
-         <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6" /></svg>
-         </div>
-         <div>
-          <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Email</h4>
-          <p id="company-email" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">contacto@mendozatapia.com<br>proyectos@mendozatapia.com</p>
-         </div>
-        </div>
-       </div>
-
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; background-color: #FECC09; color: #2A6F97;"> Enviar Mensaje </button>
+       </form>
+       <div id="form-message" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
       </div>
-      <div style="background-color: #FECC09; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-       <p style="color: #004e7c; font-weight: 600; font-size: 1rem; line-height: 1.6;">Horario de Atención<br><span style="font-weight: 700; font-size: 1.125rem;">Lunes a Viernes: 8:00 - 18:00</span></p>
+
+      <div>
+       <div style="background-color: rgba(0, 78, 124, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 3rem; border-radius: 12px; margin-bottom: 2rem;">
+        <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">Información de Contacto</h3>
+        
+        <div style="margin-bottom: 2rem;">
+         <div style="display: flex; align-items: start; gap: 1rem;">
+          <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+           <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3" /></svg>
+          </div>
+          <div>
+           <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Oficina Principal</h4>
+           <p id="office-address" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">Avenida Agustín de la Rosa Toro 659, Lima, Peru</p>
+          </div>
+         </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+         <div style="display: flex; align-items: start; gap: 1rem;">
+          <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+           <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+          </div>
+          <div>
+           <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Teléfono</h4>
+           <p id="company-phone" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">+51 1 652-8800<br>+51 987 654 321</p>
+          </div>
+         </div>
+        </div>
+
+        <div>
+         <div style="display: flex; align-items: start; gap: 1rem;">
+          <div style="width: 48px; height: 48px; background-color: rgba(254, 204, 9, 0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+           <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6" /></svg>
+          </div>
+          <div>
+           <h4 style="color: #FECC09; font-weight: 600; margin-bottom: 0.5rem;">Email</h4>
+           <p id="company-email" style="color: rgba(255, 255, 255, 0.85); line-height: 1.6;">contacto@mendozatapia.com<br>proyectos@mendozatapia.com</p>
+          </div>
+         </div>
+        </div>
+
+       </div>
+       <div style="background-color: #FECC09; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+        <p style="color: #2A6F97; font-weight: 600; font-size: 1rem; line-height: 1.6;">Horario de Atención<br><span style="font-weight: 700; font-size: 1.125rem;">Lunes a Viernes: 8:00 - 18:00</span></p>
+       </div>
       </div>
-     </div>
-    </div>
-   </div>
- </section><!-- Careers Section -->
-  <div class="reveal" style="margin-top: 4rem; width: 100%;">
+    </div> <div class="reveal" style="width: 100%;">
       <div style="background-color: white; padding: 0.5rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
         <iframe 
           width="100%" 
@@ -818,10 +818,13 @@ h1, h2, h3, .btn-primary {
       </div>
       <p style="text-align: center; color: rgba(255,255,255,0.8); margin-top: 1rem; font-size: 0.9rem;">
         <svg style="display: inline-block; vertical-align: middle; margin-right: 5px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FECC09" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Ubícanos fácilmente en San Borja / San Luis
+        Ubícanos fácilmente: Avenida Agustín de la Rosa Toro 659
       </p>
     </div>
- <section id="carreras" style="padding: 6rem 2rem; background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px);">
+
+   </div>
+ </section>
+ <section id="carreras" style="padding: 6rem 2rem; background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px);">
    
     <div style="max-width: 1200px; margin: 0 auto;">
     <div style="text-align: center; margin-bottom: 4rem;">
@@ -835,7 +838,7 @@ h1, h2, h3, .btn-primary {
      <div style="background-color: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(254, 204, 9, 0.2);">
       <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
        <div style="width: 50px; height: 50px; background-color: #FECC09; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8" /> <line x1="16" y1="13" x2="8" y2="13" /> <line x1="16" y1="17" x2="8" y2="17" /> <polyline points="10 9 9 9 8 9" />
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> <polyline points="14 2 14 8 20 8" /> <line x1="16" y1="13" x2="8" y2="13" /> <line x1="16" y1="17" x2="8" y2="17" /> <polyline points="10 9 9 9 8 9" />
         </svg>
        </div>
        <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin: 0;">Formulario de Postulación</h3>
@@ -906,14 +909,14 @@ h1, h2, h3, .btn-primary {
         <textarea id="career-message" name="mensaje" rows="3" style="width: 100%; padding: 0.875rem; border: 2px solid rgba(254, 204, 9, 0.3); border-radius: 8px; font-size: 1rem; resize: vertical; background-color: rgba(255, 255, 255, 0.05); color: white;"></textarea>
        </div>
 
-       <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; background-color: #FECC09; color: #004e7c;"> Postular Ahora </button>
+       <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; background-color: #FECC09; color: #2A6F97;"> Postular Ahora </button>
       </form>
       <div id="career-form-message" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
      </div><!-- Why Work With Us -->
      <div style="background-color: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 12px; border: 1px solid rgba(254, 204, 9, 0.2);">
       <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
        <div style="width: 50px; height: 50px; background-color: #FECC09; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M23 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M23 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
        </div>
        <h3 style="color: #FECC09; font-size: 1.5rem; font-weight: 700; margin: 0;">¿Por qué trabajar con nosotros?</h3>
@@ -946,12 +949,12 @@ h1, h2, h3, .btn-primary {
     </div>
    </div>
   </section><!-- Footer -->
-  <footer style="background-color: #004e7c; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 4rem 2rem 2rem; color: white;">
+  <footer style="background-color: #2A6F97; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.04) 39px, rgba(255, 255, 255, 0.04) 40px); padding: 4rem 2rem 2rem; color: white;">
    <div style="max-width: 1400px; margin: 0 auto;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;"><!-- Company Info -->
      <div>
       <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
-       <svg width="36" height="36" viewbox="0 0 40 40" style="color: #FECC09;"><rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" /> <path d="M10 20 L20 10 L30 20 L20 30 Z" fill="currentColor" /> <circle cx="20" cy="20" r="3" fill="#004e7c" />
+       <svg width="36" height="36" viewbox="0 0 40 40" style="color: #FECC09;"><rect x="2" y="2" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" /> <path d="M10 20 L20 10 L30 20 L20 30 Z" fill="currentColor" /> <circle cx="20" cy="20" r="3" fill="#2A6F97" />
        </svg><span style="font-size: 1.25rem; font-weight: 700;">Mendoza &amp; Tapia</span>
       </div>
       <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7; margin-bottom: 1.5rem;">Líderes en supervisión de obras e infraestructura con más de 25 años de experiencia en proyectos de alta complejidad.</p>
@@ -1246,7 +1249,7 @@ h1, h2, h3, .btn-primary {
                 // Si bajamos más de 20px O el mouse está encima...
                 if (scrollY > 20 || isHovering) {
                     // ACTIVAR BARRA: Fondo azul
-                    navbar.style.backgroundColor = '#004e7c';
+                    navbar.style.backgroundColor = '#2A6F97';
                     navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
                     
                     // Mostrar botones del menú
@@ -1309,31 +1312,38 @@ h1, h2, h3, .btn-primary {
             renderCategoryCards();
         }
 
+        /* FUNCIÓN CORREGIDA: Las imágenes ya no se recortan */
         function renderCategoryCards() {
-    const container = document.getElementById('category-cards');
-    
-    container.innerHTML = Object.keys(categoryData).map(key => {
-        const category = categoryData[key];
-        const projectCount = allProjects.filter(p => p.category === key).length;
-        
-        return `
-            <div class="service-card" style="background-color: #004e7c; overflow: hidden; padding: 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); cursor: pointer; text-align: center; border: 1px solid rgba(255,255,255,0.1);" onclick="showCategory('${key}')">
-                <div style="width: 100%; aspect-ratio: 1/1; background-color: #0f1d32; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                    ${category.icon}
-                </div>
-                <div style="padding: 1.5rem;">
-                    <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">${category.name}</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.5; font-size: 0.9rem; margin-bottom: 1rem; min-height: 40px;">
-                        ${category.description}
-                    </p>
-                    <div style="display: inline-block; background-color: #FECC09; color: #004e7c; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700;">
-                        ${projectCount} ${projectCount === 1 ? 'Proyecto' : 'Proyectos'}
+            const container = document.getElementById('category-cards');
+            
+            container.innerHTML = Object.keys(categoryData).map(key => {
+                const category = categoryData[key];
+                const projectCount = allProjects.filter(p => p.category === key).length;
+                
+                return `
+                    <div class="service-card" style="background-color: #ffffff !important; padding: 0; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 78, 124, 0.08) !important; cursor: pointer; text-align: center; border: 1px solid #bfdbfe; transition: all 0.3s ease;" onclick="showCategory('${key}')" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0, 78, 124, 0.15) !important'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 78, 124, 0.08) !important'">
+                        
+                        <div style="width: 100%; aspect-ratio: 1/1; background-color: #eff6ff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e5e7eb;">
+                            <div style="width: 90%; height: 90%; display: flex; align-items: center; justify-content: center;">
+                                ${category.icon}
+                            </div>
+                        </div>
+
+                        <div style="padding: 1.5rem;">
+                            <h3 style="color: #2A6F97; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">${category.name}</h3>
+                            
+                            <p style="color: #64748b; line-height: 1.5; font-size: 0.95rem; margin-bottom: 1.5rem; min-height: 45px;">
+                                ${category.description}
+                            </p>
+                            
+                            <div style="display: inline-block; background-color: rgba(254, 204, 9, 0.2); color: #b45309; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; border: 1px solid #FECC09;">
+                                ${projectCount} ${projectCount === 1 ? 'Proyecto' : 'Proyectos'}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        `;
-    }).join('');
-}
+                `;
+            }).join('');
+        }
 
         function showCategory(categoryKey) {
             const category = categoryData[categoryKey];
@@ -1366,7 +1376,7 @@ h1, h2, h3, .btn-primary {
                     </div>
                     <div style="padding: 1.5rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                            <span style="display: inline-block; padding: 0.375rem 0.875rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; ${project.status === 'ejecucion' ? 'background-color: rgba(254, 204, 9, 0.15); color: #a87c00;' : 'background-color: rgba(0, 78, 124, 0.1); color: #004e7c;'}">
+                            <span style="display: inline-block; padding: 0.375rem 0.875rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; ${project.status === 'ejecucion' ? 'background-color: rgba(254, 204, 9, 0.15); color: #a87c00;' : 'background-color: rgba(0, 78, 124, 0.1); color: #2A6F97;'}">
                                 ${project.status === 'ejecucion' ? 'En Ejecución' : 'Culminada'}
                             </span>
                         </div>
@@ -1402,15 +1412,15 @@ h1, h2, h3, .btn-primary {
             
             content.innerHTML = `
                 <div style="position: relative;">
-                    <div style="height: 400px; overflow: hidden; background-color: #004e7c;">
+                    <div style="height: 400px; overflow: hidden; background-color: #2A6F97;">
                         <img src="${project.images[0]}" alt="${project.name}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
                     </div>
                     <div style="padding: 3rem;">
                         <div style="margin-bottom: 2rem;">
-                            <span style="display: inline-block; background-color: #FECC09; color: #004e7c; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">
+                            <span style="display: inline-block; background-color: #FECC09; color: #2A6F97; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">
                                 ${getCategoryLabel(project.category)}
                             </span>
-                            <h2 style="color: #004e7c; font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">${project.name}</h2>
+                            <h2 style="color: #2A6F97; font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">${project.name}</h2>
                             <p style="color: #4a5568; font-size: 1.125rem; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -1418,18 +1428,18 @@ h1, h2, h3, .btn-primary {
                                 </svg>
                                 ${project.location}
                             </p>
-                            <span style="display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; ${project.status === 'ejecucion' ? 'background-color: rgba(254, 204, 9, 0.15); color: #a87c00;' : 'background-color: rgba(0, 78, 124, 0.1); color: #004e7c;'}">
+                            <span style="display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; ${project.status === 'ejecucion' ? 'background-color: rgba(254, 204, 9, 0.15); color: #a87c00;' : 'background-color: rgba(0, 78, 124, 0.1); color: #2A6F97;'}">
                                 ${project.status === 'ejecucion' ? 'En Ejecución' : 'Culminada'}
                             </span>
                         </div>
                         
                         <div style="margin-bottom: 2rem;">
-                            <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Descripción del Proyecto</h3>
+                            <h3 style="color: #2A6F97; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Descripción del Proyecto</h3>
                             <p style="color: #4a5568; line-height: 1.8; font-size: 1.0625rem;">${project.description}</p>
                         </div>
                         
                         <div style="margin-bottom: 2rem;">
-                            <h3 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Galería de Imágenes</h3>
+                            <h3 style="color: #2A6F97; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Galería de Imágenes</h3>
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
                                 ${project.images.map(img => `
                                     <div style="height: 240px; border-radius: 8px; overflow: hidden;">
@@ -1458,25 +1468,25 @@ h1, h2, h3, .btn-primary {
                 'iso9001': {
                     title: 'ISO 9001:2015',
                     subtitle: 'Sistemas de Gestión de Calidad',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>',
                     description: 'Esta certificación internacional garantiza que Mendoza & Tapia implementa sistemas de gestión de calidad robustos en todos sus procesos. Asegura la mejora continua, la satisfacción del cliente y el cumplimiento de estándares globales en la supervisión y gerencia de proyectos de infraestructura.'
                 },
                 'iso14001': {
                     title: 'ISO 14001:2015',
                     subtitle: 'Sistemas de Gestión Ambiental',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M12 8v8m-4-4h8"/></svg>',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M12 8v8m-4-4h8"/></svg>',
                     description: 'Certifica nuestro compromiso con la protección ambiental y el desarrollo sostenible. Garantizamos que todos nuestros proyectos cumplen con normativas ambientales internacionales, minimizando impactos ecológicos y promoviendo prácticas responsables en la construcción de infraestructura.'
                 },
                 'iso45001': {
                     title: 'ISO 45001:2018',
                     subtitle: 'Sistemas de Gestión de Seguridad y Salud Ocupacional',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><path d="M20 7h-9M14 17H5M6 12l-2 2 2 2M18 12l2 2-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><path d="M20 7h-9M14 17H5M6 12l-2 2 2 2M18 12l2 2-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
                     description: 'Esta certificación asegura que priorizamos la seguridad y salud de todos los trabajadores en cada proyecto. Implementamos protocolos rigurosos de prevención de riesgos, garantizando ambientes de trabajo seguros y reduciendo accidentes laborales en obras de alta complejidad.'
                 },
                 'iso37001': {
                     title: 'ISO 37001:2016',
                     subtitle: 'Sistemas de Gestión Antisoborno',
-                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#004e7c" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+                    icon: '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2A6F97" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
                     description: 'Certifica nuestra integridad corporativa y transparencia en todas las operaciones. Garantiza políticas estrictas contra el soborno y la corrupción, asegurando que nuestros procesos son éticos, legales y confiables para instituciones públicas y privadas que trabajan con nosotros.'
                 },
                 'award1': {
@@ -1504,7 +1514,7 @@ h1, h2, h3, .btn-primary {
                     <div style="width: 80px; height: 80px; background-color: #f8f9fa; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
                         ${cert.icon}
                     </div>
-                    <h2 style="color: #004e7c; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">${cert.title}</h2>
+                    <h2 style="color: #2A6F97; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">${cert.title}</h2>
                     <p style="color: #FECC09; font-size: 1rem; font-weight: 600; margin-bottom: 0;">${cert.subtitle}</p>
                 </div>
                 <div style="border-top: 2px solid #f3f4f6; padding-top: 1.5rem;">
@@ -1776,6 +1786,8 @@ h1, h2, h3, .btn-primary {
             observerStats.observe(statsSection);
         }
    </script> ```
+
+
     </script>
 
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c4710fad0756df2',t:'MTc2OTUwNDQ5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
