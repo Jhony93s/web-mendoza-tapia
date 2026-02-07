@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mendoza &amp; Tapia | Ingeniería y Supervisión de Obras</title>
-<link rel="icon" href="./Logo-oficial.jpg" type="image/png">  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" href="./aver.png" type="image/png">  <script src="https://cdn.tailwindcss.com"></script>
   <style>
         
         html, body {
@@ -355,17 +355,31 @@ h1, h2, h3, .btn-primary {
   <div style="width: 100%; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto;">
    
    <div style="display: flex; align-items: center;">
-    <a href="#inicio" style="text-decoration: none;">
+    <a href="#inicio" style="text-decoration: none; display: flex; flex-direction: column; justify-content: center;">
         <span id="logo-text" style="
-            font-size: 2.2rem; 
+            font-size: 1.8rem; 
             font-weight: 800; 
-            color: #FECC09; /* AMARILLO INICIAL */
+            color: #FECC09; 
             letter-spacing: -1px; 
             transition: color 0.4s ease; 
             font-family: 'Montserrat', sans-serif;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            line-height: 1;
+            margin-bottom: 4px; /* Un pequeño espacio antes de los ISO */
         ">
             Mendoza&Tapia
+        </span>
+        
+        <span id="iso-text" style="
+            font-size: 0.6rem; /* Letra pequeña para que entren todos */
+            font-weight: 600;
+            color: rgba(254, 204, 9, 0.9); /* Empieza Amarillo igual que el logo */
+            letter-spacing: 0.5px;
+            transition: color 0.4s ease;
+            font-family: 'Inter', sans-serif;
+            white-space: nowrap; /* Para que no se parta en dos líneas */
+        ">
+            ISO 9001:2015 | ISO 14001:2015 | ISO 45001:2018 | ISO 37001:2016
         </span>
     </a>
    </div>
@@ -1038,13 +1052,13 @@ h1, h2, h3, .btn-primary {
             },
             {
                 id: 3,
-                name: "Torre Corporativa Central",
+                name: "Local escolar 15079 Villa María",
                 category: "edificaciones",
-                location: "Santiago, Chile",
+                location: "Sullana-Piura,Perú",
                 status: "culminada",
-                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+                image: "./fotos-edificaciones/edificio-1.png",
                 images: [
-                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "./fotos-edificaciones/edificio-1.png",
                     "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
                     "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
                 ],
@@ -1083,11 +1097,11 @@ h1, h2, h3, .btn-primary {
             },
             {
                 id: 6,
-                name: "Complejo Residencial Las Américas",
+                name: "Dirección medio libre INPE",
                 category: "edificaciones",
-                location: "Bogotá, Colombia",
+                location: "Surquillo,Perú",
                 status: "culminada",
-                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+                image: "./fotos-edificaciones/edificio-2.png",
                 images: [
                     "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop",
                     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop",
@@ -1128,11 +1142,11 @@ h1, h2, h3, .btn-primary {
             },
             {
                 id: 9,
-                name: "Centro Comercial Plaza del Sol",
+                name: "Local Escolar 14032 Maria Auxiliadora - Paquete 1 ARCC",
                 category: "edificaciones",
-                location: "Medellín, Colombia",
+                location: "Sullana-Piura, Perú",
                 status: "culminada",
-                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+                image: "./fotos-edificaciones/edificio-3.png",
                 images: [
                     "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop",
                     "https://images.unsplash.com/photo-1555529902-5261145633bf?w=1200&h=800&fit=crop",
@@ -1173,11 +1187,11 @@ h1, h2, h3, .btn-primary {
             },
             {
                 id: 12,
-                name: "Edificio Institucional Ministerio Público",
+                name: "Tambo Grande Piura N°14924 - Paq. 11",
                 category: "edificaciones",
-                location: "Lima, Perú",
+                location: "Piura, Perú",
                 status: "culminada",
-                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+                image: "./fotos-edificaciones/edificio-4.png",
                 images: [
                     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
                     "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
@@ -1185,7 +1199,522 @@ h1, h2, h3, .btn-primary {
                 ],
                 description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
                 year: 2022
-            }
+            },
+            {
+                id: 13,
+                name: "Mejoramiento e Implementación en la sede principal del distrito Judicial de Cajamarca ",
+                category: "edificaciones",
+                location: "Cajamarca, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-5.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 14,
+                name: "Implementación del NCPP en la sede principal del distrito Judicial de Cajamarca ",
+                category: "edificaciones",
+                location: "Cajamarca, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-6.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 15,
+                name: "I.E. José Gálvez Egusquiza",
+                category: "edificaciones",
+                location: "Cajabamba-Cajamarca, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-7.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 16,
+                name: "Rehabilitación y Refacción del Almacén de la Intendencia Regional La Libertad - SUNAT",
+                category: "edificaciones",
+                location: "La Libertad, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-8.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 17,
+                name: "I.E. N°14064 del PAQUETE 01",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-9.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 18,
+                name: "I.E. GENARO MARTINEZ SILVA del PAQUETE 01",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-10.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 19,
+                name: "I.E. CORONEL JOSÉ ANDRÉS RAZURI del PAQUETE 01",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-11.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 19,
+                name: "I.E. JOSÉ JACOBO CRUZ del PAQUETE 01",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-12.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 19,
+                name: "I.E. DOMINGO SAVIO del PAQUETE 01",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-13.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 20,
+                name: "I.E. N°517-SULLANA-PIURA del PAQUETE 01",
+                category: "edificaciones",
+                location: "Sullana-Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-14.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 21,
+                name: "I.E. María Ignacia García – Sullana – Piura – Paquete 11",
+                category: "edificaciones",
+                location: "Sullana-Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-15.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 22,
+                name: "I.E. Sullana – Ignacio Escudero – San José – Paquete 11 – Región Piura",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-16.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 23,
+                name: "I.E Daniel Alcides Carrion – Piura – Paquete 11 – Región Piura",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-17.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 24,
+                name: "Mejoramiento de los Servicios de Administración de Justicia – Lima Sede Uruguay Belén",
+                category: "edificaciones",
+                location: "Lima, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-18.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 25,
+                name: "Complejo Deportivo Municipal Niño Héroe Manuel Bonilla Miraflores",
+                category: "edificaciones",
+                location: "Miraflores-Lima, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-19.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 26,
+                name: "I.E. Integrada de San Martín, Distrito de Inkawasi – La Convención – Cusco",
+                category: "edificaciones",
+                location: "Inkawasi-Cusco, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-20.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 27,
+                name: "Creación Del Servicio Educativo Especializado de La Región Piura” Código SNIP N° 348663",
+                category: "edificaciones",
+                location: "Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-21.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 28,
+                name: "Implementación Del Nuevo Centro de Servicios al Contribuyente SUNAT",
+                category: "edificaciones",
+                location: "Lima, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-22.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 29,
+                name: "Construcción e Implementación del Laboratorio Central de la Sunat-PIP151839",
+                category: "edificaciones",
+                location: "Callao-Lima, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-23.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 30,
+                name: "Colegio Cap. FAP José Abelardo Quiñones",
+                category: "edificaciones",
+                location: "Tumbes, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-24.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 31,
+                name: "I.E. Jose Sevilla Escajadillo",
+                category: "edificaciones",
+                location: "Pacasmayo-La Libertad Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-25.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 32,
+                name: "I.E. Jose Matias Manzanilla",
+                category: "edificaciones",
+                location: "Sullana-Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-26.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 33,
+                name: "Servicio Educativo Especializado para Alumnos de Educación Básica Regular con Alto Desempeño Académico de la Región Tacna",
+                category: "edificaciones",
+                location: "Tacna, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-27.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 34,
+                name: "Laboratorios Especializados – UNSA",
+                category: "edificaciones",
+                location: "Arequipa, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-28.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 35,
+                name: "Mejoramiento del Servicio Educativo Especializado del Nivel Secundario del Colegio de Alto Rendimiento",
+                category: "edificaciones",
+                location: "Moquegua, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-29.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 36,
+                name: "I.E. La Brea – Paquete 9",
+                category: "edificaciones",
+                location: "La Libertad-Piura-Tumbes, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-30.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 37,
+                name: "I.E. San Jose Huarmaca",
+                category: "edificaciones",
+                location: "– Huancabamba – Piura, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-31.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 38,
+                name: "I.E. Abelardo Gamarra Rondo Curgos",
+                category: "edificaciones",
+                location: "La Libertad-Piura-Tumbes, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-32.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 39,
+                name: "Construcción de la Sede Judicial de la provincia de CHEPEN Corte Superior de Justicia",
+                category: "edificaciones",
+                location: "La Libertad, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-33.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 40,
+                name: "Creación del parque Bicentenario de Miraflores",
+                category: "edificaciones",
+                location: "Miraflores-Lima, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-34.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 41,
+                name: "Creación Del Servicio Educativo Especializado De La Región Ica",
+                category: "edificaciones",
+                location: "Ica, Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-35.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 42,
+                name: "I.E. Integrada Juan Velazco Alvarado de la Comunidad De Checcapucara",
+                category: "edificaciones",
+                location: "Omacha-Paruro-Cusco,Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-36.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 43,
+                name: "Ampliación y Mejoramiento de la Escuela Técnica Superior PNP",
+                category: "edificaciones",
+                location: "Arequipa,Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-37.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+            {
+                id: 44,
+                name: "Mejoramiento de la Escuela Técnica Sup. de Suboficiales PNP",
+                category: "edificaciones",
+                location: "Tarapoto-San Martín,Perú",
+                status: "culminada",
+                image: "./fotos-edificaciones/edificio-38.png",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=1200&h=800&fit=crop"
+                ],
+                description: "Sede institucional de 18 pisos con salas de audiencia, oficinas administrativas, archivo general, sistemas de seguridad avanzados y diseño sísmico especial.",
+                year: 2022
+            },
+
+
+
+
+
         ];
 
         // Initialize
